@@ -1193,7 +1193,7 @@ Things.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">A common data type that occurs in the modeling of IoT devices is the
 <em>link</em>.
 <span>[<a href="#RFC8288" class="cite xref">RFC8288</a>]</span> defines the concept of Web Linking, which complements the
-target URI that any link will contain, with additional attributes, such
+target URI that any link will contain, with additional parameters, such
 as the "link relation type" that explains the relationship expressed
 by the link, as well as "target attributes" that provide additional
 information about the target of the link (without a need to
@@ -1223,9 +1223,10 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-the-sdftype-link" class="section-name selfRef">The sdfType "link"</a>
       </h2>
 <p id="section-2-1">The sdfType "link" can be used with the SDF "type" of "object".
-The members of that object are strings that are named as the attribute
-names.
-The special attribute name "href" is used to express the link target.<a href="#section-2-1" class="pilcrow">¶</a></p>
+The members of that object are strings that are named as the parameter
+(attribute) names.
+The special parameter name "href" is used to express the link target.
+(Parameter names specific to CoRE are also discussed in <span>[<a href="#I-D.bormann-core-target-attr" class="cite xref">I-D.bormann-core-target-attr</a>]</span>.)<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2">An example for the instance of a link is provided in <span><a href="https://rfc-editor.org/rfc/rfc6690#section-5" class="relref">Section 5</a> of [<a href="#RFC6690" class="cite xref">RFC6690</a>]</span>:<a href="#section-2-2" class="pilcrow">¶</a></p>
 <div id="section-2-3">
 <pre class="lang-link-format sourcecode">
@@ -1261,25 +1262,27 @@ the link target) could look like:<a href="#section-2-4" class="pilcrow">¶</a></
       </h2>
 <p id="section-3-1">Links play an important role in SDF modeling both during definition
 time (for adding information to a model, as e.g., in <code>sdfRef</code>) and
-during run time (for making links to instances a subject of data and
-interaction modeling).
+during run time (for making links to instances into a subject of data
+and interaction modeling).
 The present document is an early attempt at addressing the run-time
 usage of links, in particular links that fit the Web Linking <span>[<a href="#RFC8288" class="cite xref">RFC8288</a>]</span>
 abstractions.
-A related draft <span>[<a href="#I-D.laari-asdf-relations" class="cite xref">I-D.laari-asdf-relations</a>]</span> addresses definition-time links, but is not
-always clear whether it wants to address modeling run-time use of
-links as well.<a href="#section-3-1" class="pilcrow">¶</a></p>
+A related draft <span>[<a href="#I-D.laari-asdf-relations" class="cite xref">I-D.laari-asdf-relations</a>]</span> addresses definition-time links, but does
+seem to touch modeling run-time use of links as well (e.g., by
+discussing "writable" link relations).<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">Not all links used in ecosystems are based on URIs.
-E.g., OMA has "object links", which are pairs of numbers.
+E.g., OMA has "object links", which are pairs of numbers (object/instance).
 These ecosystem links may have some structure that should be modeled
 in the SDF model (e.g., where the object id part of a link always has
 to have a specific value).
 This structure can be mapped into URI strings using some convention,
 e.g., an OMA object link could be <code>oma-object:3303:0</code> (where
-<code>oma-object</code> is a URI scheme to be defined).
+<code>oma-object</code> is placeholder for a URI scheme to be defined).
 However, burying structural components of the ecosystem-specific link
 in a string syntax makes it hard to access and control those
 components from the model.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-3">Examples are needed to show how the OCF collection pattern is
+addressed by the current specification.<a href="#section-3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
@@ -1335,6 +1338,10 @@ these links.<a href="#section-4-1" class="pilcrow">¶</a></p>
 <a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
+<dt id="I-D.bormann-core-target-attr">[I-D.bormann-core-target-attr]</dt>
+        <dd>
+<span class="refAuthor">Bormann, C.</span>, <span class="refTitle">"CoRE Target Attribute Registry"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-bormann-core-target-attr-01</span>, <time datetime="2022-11-06" class="refDate">6 November 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-bormann-core-target-attr-01">https://datatracker.ietf.org/doc/html/draft-bormann-core-target-attr-01</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="I-D.laari-asdf-relations">[I-D.laari-asdf-relations]</dt>
         <dd>
 <span class="refAuthor">Laari, P.</span>, <span class="refTitle">"Extended relation information for Semantic Definition Format (SDF)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-laari-asdf-relations-00</span>, <time datetime="2022-06-03" class="refDate">3 June 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-laari-asdf-relations-00">https://datatracker.ietf.org/doc/html/draft-laari-asdf-relations-00</a>&gt;</span>. </dd>
