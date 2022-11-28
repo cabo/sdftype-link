@@ -9,16 +9,16 @@ docname: draft-bormann-asdf-sdftype-link-latest
 number:
 date:
 v: 3
-area: AREA
-workgroup: ASDF Working Group
+area: "Applications and Real-Time"
+workgroup: "A Semantic Definition Format for Data and Interactions of Things"
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: ASDF
-  mail: asdf@ietf.org
-  github: cabo/sdftype-link
+  group: "A Semantic Definition Format for Data and Interactions of Things"
+  mail: "asdf@ietf.org"
+  github: "cabo/sdftype-link"
 
 
 author:
