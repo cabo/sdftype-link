@@ -19,35 +19,39 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
-category: info
+title: An sdfType for Links
+abbrev: sdfType for Links
+category: std
+stream: IETF
+consensus: true
 
-docname: draft-todo-yourname-protocol-latest
-submissiontype: IETF  # also: "independent", "IAB", or "IRTF"
+docname: draft-bormann-asdf-sdftype-link-latest
 number:
 date:
-consensus: true
 v: 3
 area: AREA
-workgroup: WG Working Group
+workgroup: ASDF Working Group
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+  group: ASDF
+  mail: asdf@ietf.org
+  github: cabo/sdftype-link
+
 
 author:
- -
-    fullname: Your Name Here
-    organization: Your Organization Here
-    email: your.email@example.com
+-
+  name: Carsten Bormann
+  org: Universität Bremen TZI
+  street: Postfach 330440
+  city: Bremen
+  code: D-28359
+  country: Germany
+  phone: +49-421-218-63921
+  email: cabo@tzi.org
+  role: editor
 
 normative:
 
@@ -78,7 +82,8 @@ TODO Security
 
 # IANA Considerations
 
-This document has no IANA actions.
+This document registers the sdfType "link" in the SDF sdfType registry
+(which is to be defined in the SDF specification).
 
 
 --- back
@@ -86,4 +91,5 @@ This document has no IANA actions.
 # Acknowledgments
 {:numbered="false"}
 
-TODO acknowledge.
+Discussions in the OneDM liaison organization shaped this proposal.
+
