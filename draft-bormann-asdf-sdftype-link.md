@@ -30,7 +30,6 @@ author:
   country: Germany
   phone: +49-421-218-63921
   email: cabo@tzi.org
-  role: editor
 
 normative:
   I-D.ietf-asdf-sdf: sdf
@@ -38,6 +37,7 @@ normative:
 
 informative:
   RFC6690: link-format
+  I-D.laari-asdf-relations: sdfrel
 
 --- abstract
 
@@ -107,6 +107,33 @@ the link target) could look like:
  }
 }
 ~~~
+
+# Discussion
+
+Links play an important role in SDF modeling both during definition
+time (for adding information to a model, as e.g., in `sdfRef`) and
+during run time (for making links to instances a subject of data and
+interaction modeling).
+The present document is an early attempt at addressing the run-time
+usage of links, in particular links that fit the Web Linking {{-link}}
+abstractions.
+A related draft {{-sdfrel}} addresses definition-time links, but is not
+always clear whether it wants to address modeling run-time use of
+links as well.
+
+Not all links used in ecosystems are based on URIs.
+E.g., OMA has "object links", which are pairs of numbers.
+These ecosystem links may have some structure that should be modeled
+in the SDF model (e.g., where the object id part of a link always has
+to have a specific value).
+This structure can be mapped into URI strings using some convention,
+e.g., an OMA object link could be `oma-object:3303:0` (where
+`oma-object` is a URI scheme to be defined).
+However, burying structural components of the ecosystem-specific link
+in a string syntax makes it hard to access and control those
+components from the model.
+
+
 
 # Security Considerations
 
