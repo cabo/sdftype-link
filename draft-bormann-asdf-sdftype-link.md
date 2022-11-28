@@ -38,6 +38,7 @@ normative:
 informative:
   RFC6690: link-format
   I-D.laari-asdf-relations: sdfrel
+  I-D.bormann-core-target-attr: attr
 
 --- abstract
 
@@ -57,7 +58,7 @@ Things.
 A common data type that occurs in the modeling of IoT devices is the
 *link*.
 {{-link}} defines the concept of Web Linking, which complements the
-target URI that any link will contain, with additional attributes, such
+target URI that any link will contain, with additional parameters, such
 as the "link relation type" that explains the relationship expressed
 by the link, as well as "target attributes" that provide additional
 information about the target of the link (without a need to
@@ -78,9 +79,10 @@ The definitions of {{-link-format}}, {{-link}}, and {{-sdf}} apply.
 # The sdfType "link"
 
 The sdfType "link" can be used with the SDF "type" of "object".
-The members of that object are strings that are named as the attribute
-names.
-The special attribute name "href" is used to express the link target.
+The members of that object are strings that are named as the parameter
+(attribute) names.
+The special parameter name "href" is used to express the link target.
+(Parameter names specific to CoRE are also discussed in {{-attr}}.)
 
 An example for the instance of a link is provided in {{Section 5 of -link-format}}:
 
@@ -112,28 +114,29 @@ the link target) could look like:
 
 Links play an important role in SDF modeling both during definition
 time (for adding information to a model, as e.g., in `sdfRef`) and
-during run time (for making links to instances a subject of data and
-interaction modeling).
+during run time (for making links to instances into a subject of data
+and interaction modeling).
 The present document is an early attempt at addressing the run-time
 usage of links, in particular links that fit the Web Linking {{-link}}
 abstractions.
-A related draft {{-sdfrel}} addresses definition-time links, but is not
-always clear whether it wants to address modeling run-time use of
-links as well.
+A related draft {{-sdfrel}} addresses definition-time links, but does
+seem to touch modeling run-time use of links as well (e.g., by
+discussing "writable" link relations).
 
 Not all links used in ecosystems are based on URIs.
-E.g., OMA has "object links", which are pairs of numbers.
+E.g., OMA has "object links", which are pairs of numbers (object/instance).
 These ecosystem links may have some structure that should be modeled
 in the SDF model (e.g., where the object id part of a link always has
 to have a specific value).
 This structure can be mapped into URI strings using some convention,
 e.g., an OMA object link could be `oma-object:3303:0` (where
-`oma-object` is a URI scheme to be defined).
+`oma-object` is placeholder for a URI scheme to be defined).
 However, burying structural components of the ecosystem-specific link
 in a string syntax makes it hard to access and control those
 components from the model.
 
-
+Examples are needed to show how the OCF collection pattern is
+addressed by the current specification.
 
 # Security Considerations
 
