@@ -14,6 +14,7 @@ Semantic Definition Format (SDF) for Data and Interactions of Things
 <meta content="xml2rfc 3.15.2" name="generator">
 <meta content="IoT" name="keyword">
 <meta content="Link" name="keyword">
+<meta content="Web Linking" name="keyword">
 <meta content="draft-bormann-asdf-sdftype-link-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.15.2
@@ -1038,11 +1039,11 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">sdfType for Links</td>
-<td class="right">November 2022</td>
+<td class="right">December 2022</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bormann</td>
-<td class="center">Expires 1 June 2023</td>
+<td class="center">Expires 4 June 2023</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1050,17 +1051,17 @@ svg :is([stroke="fill"], [fill^="#fff"]) {
 <div id="internal-metadata" class="document-information">
 <dl id="identifiers">
 <dt class="label-workgroup">Workgroup:</dt>
-<dd class="workgroup">A Semantic Definition Format for Data and Interactions of Things</dd>
+<dd class="workgroup">ASDF WG</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
 <dd class="internet-draft">draft-bormann-asdf-sdftype-link-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2022-11-28" class="published">28 November 2022</time>
+<time datetime="2022-12-01" class="published">1 December 2022</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2023-06-01">1 June 2023</time></dd>
+<dd class="expires"><time datetime="2023-06-04">4 June 2023</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1111,7 +1112,7 @@ Semantic Definition Format (SDF) for Data and Interactions of Things
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 1 June 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 4 June 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1208,11 +1209,7 @@ data modeling language.<a href="#section-1-3" class="pilcrow">¶</a></p>
         <h3 id="name-conventions-and-definitions">
 <a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-conventions-and-definitions" class="section-name selfRef">Conventions and Definitions</a>
         </h3>
-<p id="section-1.1-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
-"<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
-described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
-appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
-<p id="section-1.1-2">The definitions of <span>[<a href="#RFC6690" class="cite xref">RFC6690</a>]</span>, <span>[<a href="#RFC8288" class="cite xref">RFC8288</a>]</span>, and <span>[<a href="#I-D.ietf-asdf-sdf" class="cite xref">I-D.ietf-asdf-sdf</a>]</span> apply.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
+<p id="section-1.1-1">The definitions of <span>[<a href="#RFC6690" class="cite xref">RFC6690</a>]</span>, <span>[<a href="#RFC8288" class="cite xref">RFC8288</a>]</span>, and <span>[<a href="#I-D.ietf-asdf-sdf" class="cite xref">I-D.ietf-asdf-sdf</a>]</span> apply.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1222,18 +1219,18 @@ appear in all capitals, as shown here.<a href="#section-1.1-1" class="pilcrow">�
       <h2 id="name-the-sdftype-link">
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-the-sdftype-link" class="section-name selfRef">The sdfType "link"</a>
       </h2>
-<p id="section-2-1">The sdfType "link" can be used with the SDF "type" of "object".
-The members of that object are strings that are named as the parameter
-(attribute) names.
+<p id="section-2-1">The sdfType "link" is intended to be used with the SDF "type" of "object".
+The members of that object are strings that are named the same as the
+link parameter (attribute) names.
 The special parameter name "href" is used to express the link target.
-(Parameter names specific to CoRE are also discussed in <span>[<a href="#I-D.bormann-core-target-attr" class="cite xref">I-D.bormann-core-target-attr</a>]</span>.)<a href="#section-2-1" class="pilcrow">¶</a></p>
+(Parameter names specific to the Constrained RESTful Environment (CoRE) are also discussed in <span>[<a href="#I-D.bormann-core-target-attr" class="cite xref">I-D.bormann-core-target-attr</a>]</span>.)<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2">An example for the instance of a link is provided in <span><a href="https://rfc-editor.org/rfc/rfc6690#section-5" class="relref">Section 5</a> of [<a href="#RFC6690" class="cite xref">RFC6690</a>]</span>:<a href="#section-2-2" class="pilcrow">¶</a></p>
 <div id="section-2-3">
 <pre class="lang-link-format sourcecode">
    &lt;/sensors/temp&gt;;rt="temperature-c";if="sensor",
 </pre><a href="#section-2-3" class="pilcrow">¶</a>
 </div>
-<p id="section-2-4">An sdfProperty that is used to describe a property that is intended to
+<p id="section-2-4">An sdfProperty that is used to describe an SDF affordance that is intended to
 hold a link like this (without getting specific on the actual link to
 the link target) could look like:<a href="#section-2-4" class="pilcrow">¶</a></p>
 <div id="section-2-5">
@@ -1318,14 +1315,6 @@ these links.<a href="#section-4-1" class="pilcrow">¶</a></p>
 <dt id="I-D.ietf-asdf-sdf">[I-D.ietf-asdf-sdf]</dt>
         <dd>
 <span class="refAuthor">Koster, M.</span> and <span class="refAuthor">C. Bormann</span>, <span class="refTitle">"Semantic Definition Format (SDF) for Data and Interactions of Things"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-asdf-sdf-12</span>, <time datetime="2022-06-30" class="refDate">30 June 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-12">https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-12</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC2119">[RFC2119]</dt>
-        <dd>
-<span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC8174">[RFC8174]</dt>
-        <dd>
-<span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8288">[RFC8288]</dt>
       <dd>

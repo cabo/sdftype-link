@@ -2,10 +2,10 @@
 
 
 
-A Semantic Definition Format for Data and Interactions of ThingsC. Bormann
+ASDF WG                                                       C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Standards Track                        28 November 2022
-Expires: 1 June 2023
+Intended status: Standards Track                         1 December 2022
+Expires: 4 June 2023
 
 
                           An sdfType for Links
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 June 2023.
+   This Internet-Draft will expire on 4 June 2023.
 
 Copyright Notice
 
@@ -100,21 +100,16 @@ Table of Contents
 
 1.1.  Conventions and Definitions
 
-   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-   "OPTIONAL" in this document are to be interpreted as described in
-   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
-   capitals, as shown here.
-
    The definitions of [RFC6690], [RFC8288], and [I-D.ietf-asdf-sdf]
    apply.
 
 2.  The sdfType "link"
 
-   The sdfType "link" can be used with the SDF "type" of "object".  The
-   members of that object are strings that are named as the parameter
-   (attribute) names.  The special parameter name "href" is used to
-   express the link target.  (Parameter names specific to CoRE are also
+   The sdfType "link" is intended to be used with the SDF "type" of
+   "object".  The members of that object are strings that are named the
+   same as the link parameter (attribute) names.  The special parameter
+   name "href" is used to express the link target.  (Parameter names
+   specific to the Constrained RESTful Environment (CoRE) are also
    discussed in [I-D.bormann-core-target-attr].)
 
    An example for the instance of a link is provided in Section 5 of
@@ -122,9 +117,9 @@ Table of Contents
 
       </sensors/temp>;rt="temperature-c";if="sensor",
 
-   An sdfProperty that is used to describe a property that is intended
-   to hold a link like this (without getting specific on the actual link
-   to the link target) could look like:
+   An sdfProperty that is used to describe an SDF affordance that is
+   intended to hold a link like this (without getting specific on the
+   actual link to the link target) could look like:
 
    {
     "sdfProperty": {
@@ -190,15 +185,6 @@ Table of Contents
               Progress, Internet-Draft, draft-ietf-asdf-sdf-12, 30 June
               2022, <https://datatracker.ietf.org/doc/html/draft-ietf-
               asdf-sdf-12>.
-
-   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119,
-              DOI 10.17487/RFC2119, March 1997,
-              <https://www.rfc-editor.org/rfc/rfc2119>.
-
-   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
-              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
    [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
               DOI 10.17487/RFC8288, October 2017,
