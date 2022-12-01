@@ -10,10 +10,11 @@ number:
 date:
 v: 3
 area: "Applications and Real-Time"
-workgroup: "A Semantic Definition Format for Data and Interactions of Things"
+workgroup: ASDF WG
 keyword:
  - IoT
  - Link
+ - Web Linking
 venue:
   group: "A Semantic Definition Format for Data and Interactions of Things"
   mail: "asdf@ietf.org"
@@ -72,15 +73,17 @@ data modeling language.
 
 ## Conventions and Definitions
 
-{::boilerplate bcp14-tagged}
-
+<!-- 
+{: :boilerplate bcp14-tagged}
+ -->
+ 
 The definitions of {{-link-format}}, {{-link}}, and {{-sdf}} apply.
 
 # The sdfType "link"
 
-The sdfType "link" can be used with the SDF "type" of "object".
-The members of that object are strings that are named as the parameter
-(attribute) names.
+The sdfType "link" is intended to be used with the SDF "type" of "object".
+The members of that object are strings that are named the same as the
+link parameter (attribute) names.
 The special parameter name "href" is used to express the link target.
 (Parameter names specific to the Constrained RESTful Environment (CoRE) are also discussed in {{-attr}}.)
 
@@ -90,7 +93,7 @@ An example for the instance of a link is provided in {{Section 5 of -link-format
    </sensors/temp>;rt="temperature-c";if="sensor",
 ~~~
 
-An sdfProperty that is used to describe a property that is intended to
+An sdfProperty that is used to describe an SDF affordance that is intended to
 hold a link like this (without getting specific on the actual link to
 the link target) could look like:
 
