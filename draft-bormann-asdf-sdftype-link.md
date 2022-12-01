@@ -73,10 +73,10 @@ data modeling language.
 
 ## Conventions and Definitions
 
-<!-- 
+<!--
 {: :boilerplate bcp14-tagged}
  -->
- 
+
 The definitions of {{-link-format}}, {{-link}}, and {{-sdf}} apply.
 
 # The sdfType "link"
