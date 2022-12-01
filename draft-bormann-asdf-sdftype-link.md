@@ -82,7 +82,7 @@ The sdfType "link" can be used with the SDF "type" of "object".
 The members of that object are strings that are named as the parameter
 (attribute) names.
 The special parameter name "href" is used to express the link target.
-(Parameter names specific to CoRE are also discussed in {{-attr}}.)
+(Parameter names specific to the Constrained RESTful Environment (CoRE) are also discussed in {{-attr}}.)
 
 An example for the instance of a link is provided in {{Section 5 of -link-format}}:
 
