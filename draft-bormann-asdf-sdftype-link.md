@@ -39,13 +39,13 @@ normative:
 informative:
   RFC6690: link-format
   I-D.laari-asdf-relations: sdfrel
-  I-D.bormann-core-target-attr: attr
+  I-D.ietf-core-target-attr: attr
 
 --- abstract
 
 This document defines and registers an sdfType "link" for the
 Semantic Definition Format (SDF) for Data and Interactions of Things
-(draft-ietf-asdf-sdf-12.txt).
+(draft-ietf-asdf-sdf).
 
 --- middle
 
@@ -138,7 +138,7 @@ However, burying structural components of the ecosystem-specific link
 in a string syntax makes it hard to access and control those
 components from the model.
 
-Examples are needed to show how the OCF collection pattern is
+TODO: Examples are needed to show how the OCF collection pattern is
 addressed by the current specification.
 
 # Security Considerations
@@ -153,9 +153,16 @@ these links.
 
 # IANA Considerations
 
-TODO: This document registers the sdfType "link" in the SDF sdfType registry
-(which is to be defined in the SDF specification).
+// RFC Ed.: please replace RFC XXXX with this RFC number and remove this note.
 
+IANA is requested to register the sdfType "link" in the "sdfType Values" sub-registry in
+the "SDF Parameters" registry, with the following completion for the
+registration template:
+
+| Name | Description        | type   | JSON Representation                | Reference |
+|------+--------------------+--------+------------------------------------+-----------|
+| link | A Web Link {{-link}} | object | object members for link attributes | RFCXXXX   |
+{: #sdftype-r title="Registration for sdfType \"link\""}
 
 --- back
 
