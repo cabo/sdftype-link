@@ -116,7 +116,7 @@ the link target) could look like:
 # Discussion
 
 Links play an important role in SDF modeling both during definition
-time (for adding information to a model, as e.g., in `sdfRef`) and
+time (for adding information to a model, such as in `sdfRef`) and
 during run time (for making links to instances into a subject of data
 and interaction modeling).
 The present document is an early attempt at addressing the run-time
@@ -159,8 +159,8 @@ IANA is requested to register the sdfType "link" in the "sdfType Values" sub-reg
 the "SDF Parameters" registry, with the following completion for the
 registration template:
 
-| Name | Description        | type   | JSON Representation                | Reference |
-|------+--------------------+--------+------------------------------------+-----------|
+| Name | Description       | type   | JSON Representation                | Reference |
+|------|-------------------|--------|------------------------------------|-----------|
 | link | A Web Link {{-link}} | object | object members for link attributes | RFCXXXX   |
 {: #sdftype-r title="Registration for sdfType \"link\""}
 
