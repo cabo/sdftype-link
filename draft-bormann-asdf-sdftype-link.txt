@@ -1,0 +1,237 @@
+
+
+
+
+ASDF WG                                                       C. Bormann
+Internet-Draft                                    Universität Bremen TZI
+Intended status: Standards Track                             3 June 2023
+Expires: 5 December 2023
+
+
+                          An sdfType for Links
+                 draft-bormann-asdf-sdftype-link-latest
+
+Abstract
+
+   This document defines and registers an sdfType "link" for the
+   Semantic Definition Format (SDF) for Data and Interactions of Things
+   (draft-ietf-asdf-sdf).
+
+About This Document
+
+   This note is to be removed before publishing as an RFC.
+
+   Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-bormann-asdf-sdftype-link/.
+
+   Discussion of this document takes place on the A Semantic Definition
+   Format for Data and Interactions of Things Working Group mailing list
+   (mailto:asdf@ietf.org), which is archived at
+   https://mailarchive.ietf.org/arch/browse/asdf/.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/asdf/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/cabo/sdftype-link.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 5 December 2023.
+
+Copyright Notice
+
+   Copyright (c) 2023 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+     1.1.  Conventions and Definitions
+   2.  The sdfType "link"
+   3.  Discussion
+   4.  Security Considerations
+   5.  IANA Considerations
+   6.  References
+     6.1.  Normative References
+     6.2.  Informative References
+   Acknowledgments
+   Author's Address
+
+1.  Introduction
+
+   The Semantic Definition Format for Data and Interactions of Things
+   (SDF, [I-D.ietf-asdf-sdf]) is a format for domain experts to use in
+   the creation and maintenance of data and interaction models in the
+   Internet of Things.
+
+   A common data type that occurs in the modeling of IoT devices is the
+   _link_. [RFC8288] defines the concept of Web Linking, which
+   complements the target URI that any link will contain, with
+   additional parameters, such as the "link relation type" that explains
+   the relationship expressed by the link, as well as "target
+   attributes" that provide additional information about the target of
+   the link (without a need to "dereference", i.e., follow, the link).
+
+   This document defines and registers an sdfType "link" for the
+   Semantic Definition Format.  This type models an abstract
+   "serialization" [RFC8288] of a link, in a way that is compatible with
+   the way SDF maps information models to its data modeling language.
+
+1.1.  Conventions and Definitions
+
+   The definitions of [RFC6690], [RFC8288], and [I-D.ietf-asdf-sdf]
+   apply.
+
+2.  The sdfType "link"
+
+   The sdfType "link" is intended to be used with the SDF "type" of
+   "object".  The members of that object are strings that are named the
+   same as the link parameter (attribute) names.  The special parameter
+   name "href" is used to express the link target.  (Parameter names
+   specific to the Constrained RESTful Environment (CoRE) are also
+   discussed in [I-D.ietf-core-target-attr].)
+
+   An example for the instance of a link is provided in Section 5 of
+   [RFC6690]:
+
+      </sensors/temp>;rt="temperature-c";if="sensor",
+
+   An sdfProperty that is used to describe an SDF affordance that is
+   intended to hold a link like this (without getting specific on the
+   actual link to the link target) could look like:
+
+   {
+    "sdfProperty": {
+     "temp-c-link": {
+      "type": "object",
+      "sdfType": "link",
+      "properties": {
+        "href": { "type": "string"},
+        "rt": { "type": "string", "const": "temperature-c"},
+        "if": { "type": "string", "const": "sensor"}
+      }
+     }
+    }
+   }
+
+3.  Discussion
+
+   Links play an important role in SDF modeling both during definition
+   time (for adding information to a model, as e.g., in sdfRef) and
+   during run time (for making links to instances into a subject of data
+   and interaction modeling).  The present document is an early attempt
+   at addressing the run-time usage of links, in particular links that
+   fit the Web Linking [RFC8288] abstractions.  A related draft
+   [I-D.laari-asdf-relations] addresses definition-time links, but does
+   seem to touch modeling run-time use of links as well (e.g., by
+   discussing "writable" link relations).
+
+   Not all links used in ecosystems are based on URIs.  E.g., OMA has
+   "object links", which are pairs of numbers (object/instance).  These
+   ecosystem links may have some structure that should be modeled in the
+   SDF model (e.g., where the object id part of a link always has to
+   have a specific value).  This structure can be mapped into URI
+   strings using some convention, e.g., an OMA object link could be oma-
+   object:3303:0 (where oma-object is placeholder for a URI scheme to be
+   defined).  However, burying structural components of the ecosystem-
+   specific link in a string syntax makes it hard to access and control
+   those components from the model.
+
+   TODO: Examples are needed to show how the OCF collection pattern is
+   addressed by the current specification.
+
+4.  Security Considerations
+
+   The security considerations of [RFC8288] apply in a general way,
+   although modeling a link as a datatype does not incur all of the
+   security considerations that will apply to actually interchanging
+   these links.
+
+   (TODO)
+
+5.  IANA Considerations
+
+   // RFC Ed.: please replace RFC XXXX with this RFC number and remove
+   this note.
+
+   IANA is requested to register the sdfType "link" in the "sdfType
+   Values" sub-registry in the "SDF Parameters" registry, with the
+   following completion for the registration template:
+
+     +======+=============+========+=====================+===========+
+     | Name | Description | type   | JSON Representation | Reference |
+     +======+=============+========+=====================+===========+
+     | link | A Web Link  | object | object members for  | RFCXXXX   |
+     |      | [RFC8288]   |        | link attributes     |           |
+     +------+-------------+--------+---------------------+-----------+
+
+                  Table 1: Registration for sdfType "link"
+
+6.  References
+
+6.1.  Normative References
+
+   [I-D.ietf-asdf-sdf]
+              Koster, M. and C. Bormann, "Semantic Definition Format
+              (SDF) for Data and Interactions of Things", Work in
+              Progress, Internet-Draft, draft-ietf-asdf-sdf-13, 12
+              January 2023, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-asdf-sdf-13>.
+
+   [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
+              DOI 10.17487/RFC8288, October 2017,
+              <https://www.rfc-editor.org/rfc/rfc8288>.
+
+6.2.  Informative References
+
+   [I-D.ietf-core-target-attr]
+              Bormann, C., "CoRE Target Attributes Registry", Work in
+              Progress, Internet-Draft, draft-ietf-core-target-attr-04,
+              5 March 2023, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-core-target-attr-04>.
+
+   [I-D.laari-asdf-relations]
+              Laari, P., "Extended relation information for Semantic
+              Definition Format (SDF)", Work in Progress, Internet-
+              Draft, draft-laari-asdf-relations-01, 12 December 2022,
+              <https://datatracker.ietf.org/doc/html/draft-laari-asdf-
+              relations-01>.
+
+   [RFC6690]  Shelby, Z., "Constrained RESTful Environments (CoRE) Link
+              Format", RFC 6690, DOI 10.17487/RFC6690, August 2012,
+              <https://www.rfc-editor.org/rfc/rfc6690>.
+
+Acknowledgments
+
+   Discussions in the OneDM liaison organization shaped this proposal.
+
+Author's Address
+
+   Carsten Bormann
+   Universität Bremen TZI
+   Postfach 330440
+   D-28359 Bremen
+   Germany
+   Phone: +49-421-218-63921
+   Email: cabo@tzi.org
