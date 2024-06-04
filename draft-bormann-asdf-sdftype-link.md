@@ -39,7 +39,7 @@ normative:
 informative:
   RFC6690: link-format
   I-D.laari-asdf-relations: sdfrel
-  I-D.ietf-core-target-attr: attr
+  RFC9423: attr
 
 --- abstract
 
@@ -167,6 +167,6 @@ registration template:
 --- back
 
 # Acknowledgments
-{:numbered="false"}
+{:unnumbered}
 
 Discussions in the OneDM liaison organization shaped this proposal.
