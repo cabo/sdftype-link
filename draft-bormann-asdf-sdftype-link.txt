@@ -4,8 +4,8 @@
 
 ASDF WG                                                       C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Standards Track                             3 June 2023
-Expires: 5 December 2023
+Intended status: Standards Track                             4 June 2024
+Expires: 6 December 2024
 
 
                           An sdfType for Links
@@ -48,11 +48,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 December 2023.
+   This Internet-Draft will expire on 6 December 2024.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -110,7 +110,7 @@ Table of Contents
    same as the link parameter (attribute) names.  The special parameter
    name "href" is used to express the link target.  (Parameter names
    specific to the Constrained RESTful Environment (CoRE) are also
-   discussed in [I-D.ietf-core-target-attr].)
+   discussed in [RFC9423].)
 
    An example for the instance of a link is provided in Section 5 of
    [RFC6690]:
@@ -138,7 +138,7 @@ Table of Contents
 3.  Discussion
 
    Links play an important role in SDF modeling both during definition
-   time (for adding information to a model, as e.g., in sdfRef) and
+   time (for adding information to a model, such as in sdfRef) and
    during run time (for making links to instances into a subject of data
    and interaction modeling).  The present document is an early attempt
    at addressing the run-time usage of links, in particular links that
@@ -193,11 +193,12 @@ Table of Contents
 6.1.  Normative References
 
    [I-D.ietf-asdf-sdf]
-              Koster, M. and C. Bormann, "Semantic Definition Format
-              (SDF) for Data and Interactions of Things", Work in
-              Progress, Internet-Draft, draft-ietf-asdf-sdf-13, 12
-              January 2023, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-asdf-sdf-13>.
+              Koster, M., Bormann, C., and A. Keränen, "Semantic
+              Definition Format (SDF) for Data and Interactions of
+              Things", Work in Progress, Internet-Draft, draft-ietf-
+              asdf-sdf-18, 28 February 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-asdf-
+              sdf-18>.
 
    [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
               DOI 10.17487/RFC8288, October 2017,
@@ -205,22 +206,21 @@ Table of Contents
 
 6.2.  Informative References
 
-   [I-D.ietf-core-target-attr]
-              Bormann, C., "CoRE Target Attributes Registry", Work in
-              Progress, Internet-Draft, draft-ietf-core-target-attr-04,
-              5 March 2023, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-core-target-attr-04>.
-
    [I-D.laari-asdf-relations]
               Laari, P., "Extended relation information for Semantic
               Definition Format (SDF)", Work in Progress, Internet-
-              Draft, draft-laari-asdf-relations-01, 12 December 2022,
+              Draft, draft-laari-asdf-relations-02, 13 September 2023,
               <https://datatracker.ietf.org/doc/html/draft-laari-asdf-
-              relations-01>.
+              relations-02>.
 
    [RFC6690]  Shelby, Z., "Constrained RESTful Environments (CoRE) Link
               Format", RFC 6690, DOI 10.17487/RFC6690, August 2012,
               <https://www.rfc-editor.org/rfc/rfc6690>.
+
+   [RFC9423]  Bormann, C., "Constrained RESTful Environments (CoRE)
+              Target Attributes Registry", RFC 9423,
+              DOI 10.17487/RFC9423, April 2024,
+              <https://www.rfc-editor.org/rfc/rfc9423>.
 
 Acknowledgments
 
