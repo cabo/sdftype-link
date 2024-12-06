@@ -1,4 +1,6 @@
 ---
+v: 3
+
 title: An sdfType for Links
 abbrev: sdfType for Links
 category: std
@@ -8,7 +10,6 @@ consensus: true
 docname: draft-bormann-asdf-sdftype-link-latest
 number:
 date:
-v: 3
 area: "Applications and Real-Time"
 workgroup: ASDF WG
 keyword:
@@ -58,8 +59,8 @@ Things.
 
 A common data type that occurs in the modeling of IoT devices is the
 *link*.
-{{-link}} defines the concept of Web Linking, which complements the
-target URI that any link will contain, with additional parameters, such
+{{-link}} defines the concept of Web Linking, which, apart from the
+target URI that any link will contain, can provide additional parameters, such
 as the "link relation type" that explains the relationship expressed
 by the link, as well as "target attributes" that provide additional
 information about the target of the link (without a need to
@@ -83,7 +84,8 @@ The sdfType "link" is intended to be used with the SDF "type" of "object".
 The members of that object are strings that are named the same as the
 link parameter (attribute) names.
 The special parameter name "href" is used to express the link target.
-(Parameter names specific to the Constrained RESTful Environment (CoRE) are also discussed in {{-attr}}.)
+(Parameter names specific to the Constrained RESTful Environment
+(CoRE) are also discussed in {{-attr}}.)
 
 Note that attribute names and relation type names are case-insensitive
 in {{-link}}.
@@ -96,9 +98,11 @@ An example for the instance of a link is provided in {{Section 5 of -link-format
    </sensors/temp>;rt="temperature-c";if="sensor",
 ~~~
 
-An sdfProperty that is used to describe an SDF affordance that is intended to
-hold a link like this (without getting specific on the actual link to
-the link target) could look like:
+To hold a link like this, we could describe an SDF affordance that is
+specific on the target attributes above, but does not contain
+instance-specific (run-time) information on the actual URI that points
+to the link target.
+An sdfProperty for that could look like:
 
 ~~~ sdf
 {
@@ -130,7 +134,7 @@ seem to touch modeling run-time use of links as well (e.g., by
 discussing "writable" link relations).
 
 Not all links used in ecosystems are based on URIs.
-E.g., OMA has "object links", which are pairs of numbers (object/instance).
+E.g., OMA has "object links", which are basically pairs of numbers (object/instance).
 These ecosystem links may have some structure that should be modeled
 in the SDF model (e.g., where the object id part of a link always has
 to have a specific value).
@@ -162,8 +166,8 @@ IANA is requested to register the sdfType "link" in the "sdfType Values" sub-reg
 the "SDF Parameters" registry, with the following completion for the
 registration template:
 
-| Name | Description       | type   | JSON Representation                | Reference |
-|------|-------------------|--------|------------------------------------|-----------|
+| Name | Description        | type   | JSON Representation                | Reference |
+|------+--------------------+--------+------------------------------------+-----------|
 | link | A Web Link {{-link}} | object | object members for link attributes | RFCXXXX   |
 {: #sdftype-r title="Registration for sdfType \"link\""}
 
