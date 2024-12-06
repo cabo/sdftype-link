@@ -73,11 +73,9 @@ data modeling language.
 
 ## Conventions and Definitions
 
-<!--
-{: :boilerplate bcp14-tagged}
- -->
-
 The definitions of {{-link-format}}, {{-link}}, and {{-sdf}} apply.
+
+{::boilerplate bcp14-tagged-bcp14}
 
 # The sdfType "link"
 
@@ -86,6 +84,11 @@ The members of that object are strings that are named the same as the
 link parameter (attribute) names.
 The special parameter name "href" is used to express the link target.
 (Parameter names specific to the Constrained RESTful Environment (CoRE) are also discussed in {{-attr}}.)
+
+Note that attribute names and relation type names are case-insensitive
+in {{-link}}.
+Strings that are case-insensitive in {{-link}} MUST be in their
+lowercase form when used in this specification.
 
 An example for the instance of a link is provided in {{Section 5 of -link-format}}:
 
