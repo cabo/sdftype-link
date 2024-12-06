@@ -4,8 +4,8 @@
 
 ASDF WG                                                       C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Standards Track                             4 June 2024
-Expires: 6 December 2024
+Intended status: Standards Track                         6 December 2024
+Expires: 9 June 2025
 
 
                           An sdfType for Links
@@ -48,7 +48,15 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 December 2024.
+   This Internet-Draft will expire on 9 June 2025.
+
+
+
+
+Bormann                    Expires 9 June 2025                  [Page 1]
+
+Internet-Draft              sdfType for Links              December 2024
+
 
 Copyright Notice
 
@@ -66,17 +74,17 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction
-     1.1.  Conventions and Definitions
-   2.  The sdfType "link"
-   3.  Discussion
-   4.  Security Considerations
-   5.  IANA Considerations
-   6.  References
-     6.1.  Normative References
-     6.2.  Informative References
-   Acknowledgments
-   Author's Address
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+     1.1.  Conventions and Definitions . . . . . . . . . . . . . . .   3
+   2.  The sdfType "link"  . . . . . . . . . . . . . . . . . . . . .   3
+   3.  Discussion  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+   4.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
+   5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
+   6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
+     6.2.  Informative References  . . . . . . . . . . . . . . . . .   5
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .   6
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
@@ -86,8 +94,8 @@ Table of Contents
    Internet of Things.
 
    A common data type that occurs in the modeling of IoT devices is the
-   _link_. [RFC8288] defines the concept of Web Linking, which
-   complements the target URI that any link will contain, with
+   _link_. [RFC8288] defines the concept of Web Linking, which, apart
+   from the target URI that any link will contain, can provide
    additional parameters, such as the "link relation type" that explains
    the relationship expressed by the link, as well as "target
    attributes" that provide additional information about the target of
@@ -98,10 +106,24 @@ Table of Contents
    "serialization" [RFC8288] of a link, in a way that is compatible with
    the way SDF maps information models to its data modeling language.
 
+
+
+
+Bormann                    Expires 9 June 2025                  [Page 2]
+
+Internet-Draft              sdfType for Links              December 2024
+
+
 1.1.  Conventions and Definitions
 
    The definitions of [RFC6690], [RFC8288], and [I-D.ietf-asdf-sdf]
    apply.
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   [BCP14] (RFC2119) (RFC8174) when, and only when, they appear in all
+   capitals, as shown here.
 
 2.  The sdfType "link"
 
@@ -112,14 +134,20 @@ Table of Contents
    specific to the Constrained RESTful Environment (CoRE) are also
    discussed in [RFC9423].)
 
+   Note that attribute names and relation type names are case-
+   insensitive in [RFC8288].  Strings that are case-insensitive in
+   [RFC8288] MUST be in their lowercase form when used in this
+   specification.
+
    An example for the instance of a link is provided in Section 5 of
    [RFC6690]:
 
       </sensors/temp>;rt="temperature-c";if="sensor",
 
-   An sdfProperty that is used to describe an SDF affordance that is
-   intended to hold a link like this (without getting specific on the
-   actual link to the link target) could look like:
+   To hold a link like this, we could describe an SDF affordance that is
+   specific on the target attributes above, but does not contain
+   instance-specific (run-time) information on the actual URI that
+   points to the link target.  An sdfProperty for that could look like:
 
    {
     "sdfProperty": {
@@ -135,6 +163,13 @@ Table of Contents
     }
    }
 
+
+
+Bormann                    Expires 9 June 2025                  [Page 3]
+
+Internet-Draft              sdfType for Links              December 2024
+
+
 3.  Discussion
 
    Links play an important role in SDF modeling both during definition
@@ -148,15 +183,15 @@ Table of Contents
    discussing "writable" link relations).
 
    Not all links used in ecosystems are based on URIs.  E.g., OMA has
-   "object links", which are pairs of numbers (object/instance).  These
-   ecosystem links may have some structure that should be modeled in the
-   SDF model (e.g., where the object id part of a link always has to
-   have a specific value).  This structure can be mapped into URI
-   strings using some convention, e.g., an OMA object link could be oma-
-   object:3303:0 (where oma-object is placeholder for a URI scheme to be
-   defined).  However, burying structural components of the ecosystem-
-   specific link in a string syntax makes it hard to access and control
-   those components from the model.
+   "object links", which are basically pairs of numbers (object/
+   instance).  These ecosystem links may have some structure that should
+   be modeled in the SDF model (e.g., where the object id part of a link
+   always has to have a specific value).  This structure can be mapped
+   into URI strings using some convention, e.g., an OMA object link
+   could be oma-object:3303:0 (where oma-object is placeholder for a URI
+   scheme to be defined).  However, burying structural components of the
+   ecosystem-specific link in a string syntax makes it hard to access
+   and control those components from the model.
 
    TODO: Examples are needed to show how the OCF collection pattern is
    addressed by the current specification.
@@ -179,6 +214,18 @@ Table of Contents
    Values" sub-registry in the "SDF Parameters" registry, with the
    following completion for the registration template:
 
+
+
+
+
+
+
+
+Bormann                    Expires 9 June 2025                  [Page 4]
+
+Internet-Draft              sdfType for Links              December 2024
+
+
      +======+=============+========+=====================+===========+
      | Name | Description | type   | JSON Representation | Reference |
      +======+=============+========+=====================+===========+
@@ -191,6 +238,19 @@ Table of Contents
 6.  References
 
 6.1.  Normative References
+
+   [BCP14]    Best Current Practice 14,
+              <https://www.rfc-editor.org/info/bcp14>.
+              At the time of writing, this BCP comprises the following:
+
+              Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/info/rfc2119>.
+
+              Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
    [I-D.ietf-asdf-sdf]
               Koster, M., Bormann, C., and A. Keränen, "Semantic
@@ -209,9 +269,18 @@ Table of Contents
    [I-D.laari-asdf-relations]
               Laari, P., "Extended relation information for Semantic
               Definition Format (SDF)", Work in Progress, Internet-
-              Draft, draft-laari-asdf-relations-02, 13 September 2023,
+              Draft, draft-laari-asdf-relations-03, 20 June 2024,
               <https://datatracker.ietf.org/doc/html/draft-laari-asdf-
-              relations-02>.
+              relations-03>.
+
+
+
+
+
+Bormann                    Expires 9 June 2025                  [Page 5]
+
+Internet-Draft              sdfType for Links              December 2024
+
 
    [RFC6690]  Shelby, Z., "Constrained RESTful Environments (CoRE) Link
               Format", RFC 6690, DOI 10.17487/RFC6690, August 2012,
@@ -235,3 +304,33 @@ Author's Address
    Germany
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann                    Expires 9 June 2025                  [Page 6]
