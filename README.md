@@ -7,6 +7,7 @@ This is the working area for the individual Internet-Draft, "An sdfType for Link
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-bormann-asdf-sdftype-link)
 * [Compare Editor's Copy to Individual Draft](https://cabo.github.io/sdftype-link/#go.draft-bormann-asdf-sdftype-link.diff)
 
+[Access to all branches](https://cabo.github.io/sdftype-link/)
 
 ## Contributing
 
