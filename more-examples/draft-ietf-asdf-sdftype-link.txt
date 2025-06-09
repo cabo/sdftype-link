@@ -4,8 +4,9 @@
 
 ASDF WG                                                       C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Standards Track                             9 June 2025
-Expires: 11 December 2025
+Intended status: Standards Track                              A. Keränen
+Expires: 11 December 2025                                       Ericsson
+                                                             9 June 2025
 
 
                           An sdfType for Links
@@ -52,8 +53,7 @@ Status of This Memo
 
 
 
-
-Bormann                 Expires 11 December 2025                [Page 1]
+Bormann & Keränen       Expires 11 December 2025                [Page 1]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -87,7 +87,7 @@ Table of Contents
      A.1.  Constructing a Link from an Organization's Ecosystem  . .   7
      A.2.  Using with OMA test object  . . . . . . . . . . . . . . .   8
    Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  12
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  12
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  12
 
 1.  Introduction
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Bormann                 Expires 11 December 2025                [Page 2]
+Bormann & Keränen       Expires 11 December 2025                [Page 2]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -165,7 +165,7 @@ Internet-Draft              sdfType for Links                  June 2025
 
 
 
-Bormann                 Expires 11 December 2025                [Page 3]
+Bormann & Keränen       Expires 11 December 2025                [Page 3]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -221,7 +221,7 @@ Internet-Draft              sdfType for Links                  June 2025
 
 
 
-Bormann                 Expires 11 December 2025                [Page 4]
+Bormann & Keränen       Expires 11 December 2025                [Page 4]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -277,7 +277,7 @@ Internet-Draft              sdfType for Links                  June 2025
 
 
 
-Bormann                 Expires 11 December 2025                [Page 5]
+Bormann & Keränen       Expires 11 December 2025                [Page 5]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -333,7 +333,7 @@ Appendix A.  Examples
 
 
 
-Bormann                 Expires 11 December 2025                [Page 6]
+Bormann & Keränen       Expires 11 December 2025                [Page 6]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -389,7 +389,7 @@ A.1.  Constructing a Link from an Organization's Ecosystem
 
 
 
-Bormann                 Expires 11 December 2025                [Page 7]
+Bormann & Keränen       Expires 11 December 2025                [Page 7]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -445,7 +445,7 @@ A.2.  Using with OMA test object
 
 
 
-Bormann                 Expires 11 December 2025                [Page 8]
+Bormann & Keränen       Expires 11 December 2025                [Page 8]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -501,7 +501,7 @@ Internet-Draft              sdfType for Links                  June 2025
 
 
 
-Bormann                 Expires 11 December 2025                [Page 9]
+Bormann & Keränen       Expires 11 December 2025                [Page 9]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -557,7 +557,7 @@ Internet-Draft              sdfType for Links                  June 2025
 
 
 
-Bormann                 Expires 11 December 2025               [Page 10]
+Bormann & Keränen       Expires 11 December 2025               [Page 10]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -613,7 +613,7 @@ Internet-Draft              sdfType for Links                  June 2025
 
 
 
-Bormann                 Expires 11 December 2025               [Page 11]
+Bormann & Keränen       Expires 11 December 2025               [Page 11]
 
 Internet-Draft              sdfType for Links                  June 2025
 
@@ -631,7 +631,7 @@ Acknowledgments
 
    Discussions in the OneDM liaison organization shaped this proposal.
 
-Author's Address
+Authors' Addresses
 
    Carsten Bormann
    Universität Bremen TZI
@@ -642,6 +642,11 @@ Author's Address
    Email: cabo@tzi.org
 
 
+   Ari Keränen
+   Ericsson
+   FI-02420 Jorvas
+   Finland
+   Email: ari.keranen@ericsson.com
 
 
 
@@ -664,9 +669,4 @@ Author's Address
 
 
 
-
-
-
-
-
-Bormann                 Expires 11 December 2025               [Page 12]
+Bormann & Keränen       Expires 11 December 2025               [Page 12]
