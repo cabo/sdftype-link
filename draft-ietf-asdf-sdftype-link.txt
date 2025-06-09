@@ -4,12 +4,12 @@
 
 ASDF WG                                                       C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Standards Track                         6 December 2024
-Expires: 9 June 2025
+Intended status: Standards Track                             9 June 2025
+Expires: 11 December 2025
 
 
                           An sdfType for Links
-                 draft-bormann-asdf-sdftype-link-latest
+                  draft-ietf-asdf-sdftype-link-latest
 
 Abstract
 
@@ -22,7 +22,7 @@ About This Document
    This note is to be removed before publishing as an RFC.
 
    Status information for this document may be found at
-   https://datatracker.ietf.org/doc/draft-bormann-asdf-sdftype-link/.
+   https://datatracker.ietf.org/doc/draft-ietf-asdf-sdftype-link/.
 
    Discussion of this document takes place on the A Semantic Definition
    Format for Data and Interactions of Things Working Group mailing list
@@ -48,19 +48,19 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 June 2025.
+   This Internet-Draft will expire on 11 December 2025.
 
 
 
 
-Bormann                    Expires 9 June 2025                  [Page 1]
+Bormann                 Expires 11 December 2025                [Page 1]
 
-Internet-Draft              sdfType for Links              December 2024
+Internet-Draft              sdfType for Links                  June 2025
 
 
 Copyright Notice
 
-   Copyright (c) 2024 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann                    Expires 9 June 2025                  [Page 2]
+Bormann                 Expires 11 December 2025                [Page 2]
 
-Internet-Draft              sdfType for Links              December 2024
+Internet-Draft              sdfType for Links                  June 2025
 
 
 1.1.  Conventions and Definitions
@@ -165,9 +165,9 @@ Internet-Draft              sdfType for Links              December 2024
 
 
 
-Bormann                    Expires 9 June 2025                  [Page 3]
+Bormann                 Expires 11 December 2025                [Page 3]
 
-Internet-Draft              sdfType for Links              December 2024
+Internet-Draft              sdfType for Links                  June 2025
 
 
 3.  Discussion
@@ -221,9 +221,9 @@ Internet-Draft              sdfType for Links              December 2024
 
 
 
-Bormann                    Expires 9 June 2025                  [Page 4]
+Bormann                 Expires 11 December 2025                [Page 4]
 
-Internet-Draft              sdfType for Links              December 2024
+Internet-Draft              sdfType for Links                  June 2025
 
 
      +======+=============+========+=====================+===========+
@@ -256,9 +256,9 @@ Internet-Draft              sdfType for Links              December 2024
               Koster, M., Bormann, C., and A. Keränen, "Semantic
               Definition Format (SDF) for Data and Interactions of
               Things", Work in Progress, Internet-Draft, draft-ietf-
-              asdf-sdf-18, 28 February 2024,
+              asdf-sdf-23, 17 March 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-asdf-
-              sdf-18>.
+              sdf-23>.
 
    [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
               DOI 10.17487/RFC8288, October 2017,
@@ -269,17 +269,17 @@ Internet-Draft              sdfType for Links              December 2024
    [I-D.laari-asdf-relations]
               Laari, P., "Extended relation information for Semantic
               Definition Format (SDF)", Work in Progress, Internet-
-              Draft, draft-laari-asdf-relations-03, 20 June 2024,
+              Draft, draft-laari-asdf-relations-04, 28 January 2025,
               <https://datatracker.ietf.org/doc/html/draft-laari-asdf-
-              relations-03>.
+              relations-04>.
 
 
 
 
 
-Bormann                    Expires 9 June 2025                  [Page 5]
+Bormann                 Expires 11 December 2025                [Page 5]
 
-Internet-Draft              sdfType for Links              December 2024
+Internet-Draft              sdfType for Links                  June 2025
 
 
    [RFC6690]  Shelby, Z., "Constrained RESTful Environments (CoRE) Link
@@ -333,4 +333,4 @@ Author's Address
 
 
 
-Bormann                    Expires 9 June 2025                  [Page 6]
+Bormann                 Expires 11 December 2025                [Page 6]

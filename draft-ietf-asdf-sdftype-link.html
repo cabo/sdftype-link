@@ -11,27 +11,27 @@
 Semantic Definition Format (SDF) for Data and Interactions of Things
 (draft-ietf-asdf-sdf). 
     ' name="description">
-<meta content="xml2rfc 3.25.0" name="generator">
+<meta content="xml2rfc 3.28.1" name="generator">
 <meta content="IoT" name="keyword">
 <meta content="Link" name="keyword">
 <meta content="Web Linking" name="keyword">
-<meta content="draft-bormann-asdf-sdftype-link-latest" name="ietf.draft">
+<meta content="draft-ietf-asdf-sdftype-link-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.25.0
-    Python 3.12.7
+  xml2rfc 3.28.1
+    Python 3.12.10
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
-    Jinja2 3.1.4
-    lxml 5.3.0
-    platformdirs 4.3.6
-    pycountry 22.3.5
-    PyYAML 6.0.1
+    Jinja2 3.1.6
+    lxml 5.3.1
+    platformdirs 4.3.8
+    pycountry 24.6.1
+    PyYAML 6.0.2
     requests 2.32.3
-    setuptools 70.3.0
+    setuptools 80.9.0
     wcwidth 0.2.13
 -->
-<link href="draft-bormann-asdf-sdftype-link.xml" rel="alternate" type="application/rfc+xml">
+<link href="draft-ietf-asdf-sdftype-link.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
 <style type="text/css">@font-face {
   font-family: 'Lora';
@@ -439,7 +439,7 @@ dl {
     margin-bottom: 0;
   }
 }
-dl > dt {
+dl:not(.dlNewline) > dt {
   float: left;
   margin-right: 2ch;
   min-width: 8ch;
@@ -538,7 +538,11 @@ figcaption, caption {
   }
   pre, svg {
     display: inline-block;
-    overflow-x: auto;
+    /* In the horizontal direction, sometimes people make over-sized figures.
+       Scrollbars for those is therefore necessary: auto adds them as necessary..
+       In the vertical direction, the line-height can combine with the font
+       asender/descender height to produce scrollbars: hidden avoids that. */
+    overflow: auto hidden;
   }
   pre {
     max-width: 100%;
@@ -1044,11 +1048,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">sdfType for Links</td>
-<td class="right">December 2024</td>
+<td class="right">June 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bormann</td>
-<td class="center">Expires 9 June 2025</td>
+<td class="center">Expires 11 December 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1058,15 +1062,15 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dt class="label-workgroup">Workgroup:</dt>
 <dd class="workgroup">ASDF WG</dd>
 <dt class="label-internet-draft">Internet-Draft:</dt>
-<dd class="internet-draft">draft-bormann-asdf-sdftype-link-latest</dd>
+<dd class="internet-draft">draft-ietf-asdf-sdftype-link-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-12-06" class="published">6 December 2024</time>
+<time datetime="2025-06-09" class="published">9 June 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-06-09">9 June 2025</time></dd>
+<dd class="expires"><time datetime="2025-12-11">11 December 2025</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1089,7 +1093,7 @@ Semantic Definition Format (SDF) for Data and Interactions of Things
       </h2>
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
-        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-bormann-asdf-sdftype-link/">https://datatracker.ietf.org/doc/draft-bormann-asdf-sdftype-link/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
+        Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-ietf-asdf-sdftype-link/">https://datatracker.ietf.org/doc/draft-ietf-asdf-sdftype-link/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 <p id="section-note.1-3">
         Discussion of this document takes place on the
         A Semantic Definition Format for Data and Interactions of Things Working Group mailing list (<span><a href="mailto:asdf@ietf.org">mailto:asdf@ietf.org</a></span>),
@@ -1117,7 +1121,7 @@ Semantic Definition Format (SDF) for Data and Interactions of Things
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 9 June 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 11 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1126,7 +1130,7 @@ Semantic Definition Format (SDF) for Data and Interactions of Things
 <a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
         </h2>
 <p id="section-boilerplate.2-1">
-            Copyright (c) 2024 IETF Trust and the persons identified as the
+            Copyright (c) 2025 IETF Trust and the persons identified as the
             document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.2-2">
             This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1371,7 +1375,7 @@ registration template:<a href="#section-5-2" class="pilcrow">¶</a></p>
 <dd class="break"></dd>
 <dt id="I-D.ietf-asdf-sdf">[I-D.ietf-asdf-sdf]</dt>
         <dd>
-<span class="refAuthor">Koster, M.</span>, <span class="refAuthor">Bormann, C.</span>, and <span class="refAuthor">A. Keränen</span>, <span class="refTitle">"Semantic Definition Format (SDF) for Data and Interactions of Things"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-asdf-sdf-18</span>, <time datetime="2024-02-28" class="refDate">28 February 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-18">https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-18</a>&gt;</span>. </dd>
+<span class="refAuthor">Koster, M.</span>, <span class="refAuthor">Bormann, C.</span>, and <span class="refAuthor">A. Keränen</span>, <span class="refTitle">"Semantic Definition Format (SDF) for Data and Interactions of Things"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-asdf-sdf-23</span>, <time datetime="2025-03-17" class="refDate">17 March 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-23">https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-23</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8288">[RFC8288]</dt>
       <dd>
@@ -1388,7 +1392,7 @@ registration template:<a href="#section-5-2" class="pilcrow">¶</a></p>
 <dl class="references">
 <dt id="I-D.laari-asdf-relations">[I-D.laari-asdf-relations]</dt>
         <dd>
-<span class="refAuthor">Laari, P.</span>, <span class="refTitle">"Extended relation information for Semantic Definition Format (SDF)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-laari-asdf-relations-03</span>, <time datetime="2024-06-20" class="refDate">20 June 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-laari-asdf-relations-03">https://datatracker.ietf.org/doc/html/draft-laari-asdf-relations-03</a>&gt;</span>. </dd>
+<span class="refAuthor">Laari, P.</span>, <span class="refTitle">"Extended relation information for Semantic Definition Format (SDF)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-laari-asdf-relations-04</span>, <time datetime="2025-01-28" class="refDate">28 January 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-laari-asdf-relations-04">https://datatracker.ietf.org/doc/html/draft-laari-asdf-relations-04</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6690">[RFC6690]</dt>
         <dd>
