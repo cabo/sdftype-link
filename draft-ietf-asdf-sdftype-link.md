@@ -263,7 +263,7 @@ This example assumes `example.com` has exported a definition for
 
 As a more specific example, the following assumes that
 `openmobilealliance.org` has provided a definition under `objlink` for
-the Object Links defined for LWM2M.
+the Object Links defined for LwM2M.
 [^addref]
 
 [^addref]: Add reference!
@@ -312,8 +312,8 @@ the Object Links defined for LWM2M.
 ~~~
 
 The following is a potential definition that openmobilealliance.org
-could export that provides `sdfRef`-friendly descriptions of LWM2M
-core links as well as the more LWM2M specific object links:
+could export that provides `sdfRef`-friendly descriptions of LwM2M
+core links as well as the more LwM2M specific object links:
 
 ~~~json
 {
