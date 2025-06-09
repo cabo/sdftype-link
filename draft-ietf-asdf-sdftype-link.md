@@ -32,6 +32,12 @@ author:
   country: Germany
   phone: +49-421-218-63921
   email: cabo@tzi.org
+- name: Ari Keränen
+  org: Ericsson
+  city: Jorvas
+  code: '02420'
+  country: Finland
+  email: ari.keranen@ericsson.com
 
 normative:
   I-D.ietf-asdf-sdf: sdf
