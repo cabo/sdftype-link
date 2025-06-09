@@ -295,7 +295,7 @@ the Object Links defined for LWM2M.
         },
         "CoreLnk_Value": {
           "label": "CoreLnk Value",
-          "description": "Initial value must be a the \"</3442>\".",
+          "description": "Initial value must be \"</3442>\".",
           "oma:id": 180,
           "sdfRef": "omatypes:corelink"
         }
