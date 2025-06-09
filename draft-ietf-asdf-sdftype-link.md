@@ -7,7 +7,7 @@ category: std
 stream: IETF
 consensus: true
 
-docname: draft-bormann-asdf-sdftype-link-latest
+docname: draft-ietf-asdf-sdftype-link-latest
 number:
 date:
 area: "Applications and Real-Time"
