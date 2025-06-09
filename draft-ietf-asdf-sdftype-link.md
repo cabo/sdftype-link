@@ -282,9 +282,9 @@ the Object Links defined for LwM2M.
   },
   "defaultNamespace": "oma",
   "sdfObject": {
-      "LwM2M_v1.1_Test_Object": {
+    "LwM2M_v1.1_Test_Object": {
       "label": "LwM2M v1.1 Test Object",
-      "description": "This object aims to make it easier to do interoperability tests about LWM2M v1.1. It contains resources for each available datatype.",
+      "$comment": "Simplified version of OMA Test Object with only two link type resources"
       "oma:id": 3442,
       "sdfProperty": {
         "ObjLink_Value": {
