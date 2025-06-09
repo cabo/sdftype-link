@@ -1,13 +1,14 @@
+<!-- regenerate: on (set to off if you edit this file) -->
+
 # An sdfType for Links
 
-This is the working area for the individual Internet-Draft, "An sdfType for Links".
+This is the working area for the IETF [ASDF Working Group](https://datatracker.ietf.org/group/asdf/documents/) Internet-Draft, "An sdfType for Links".
 
-* [Editor's Copy](https://cabo.github.io/sdftype-link/#go.draft-bormann-asdf-sdftype-link.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-bormann-asdf-sdftype-link)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-bormann-asdf-sdftype-link)
-* [Compare Editor's Copy to Individual Draft](https://cabo.github.io/sdftype-link/#go.draft-bormann-asdf-sdftype-link.diff)
+* [Editor's Copy](https://cabo.github.io/sdftype-link/#go.draft-ietf-asdf-sdftype-link.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-asdf-sdftype-link)
+* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdftype-link)
+* [Compare Editor's Copy to Working Group Draft](https://cabo.github.io/sdftype-link/#go.draft-ietf-asdf-sdftype-link.diff)
 
-[Access to all branches](https://cabo.github.io/sdftype-link/)
 
 ## Contributing
 
