@@ -39,6 +39,7 @@ normative:
 
 informative:
   RFC6690: link-format
+  RFC7396: merge-patch
   I-D.laari-asdf-relations: sdfrel
   RFC9423: attr
 
@@ -120,6 +121,8 @@ An sdfProperty for that could look like:
 }
 ~~~
 
+Further examples that show sdfType "link" in context are in {{examples}}.
+
 # Discussion
 
 Links play an important role in SDF modeling both during definition
@@ -172,6 +175,247 @@ registration template:
 {: #sdftype-r title="Registration for sdfType \"link\""}
 
 --- back
+
+# Examples
+
+sdfType "link" can be used to specify links with information specific
+to an organization's ecosystem.
+In many cases, `sdfRef` (see {{Section 4.4 of -sdf}}) provides a
+convenient way to assemble the link specification from elements that
+are generic for an organization and elements that are specific to the
+model being defined.
+
+{:aside}
+>
+Note that `sdfRef` operates by applying the JSON Merge Patch algorithm
+{{-merge-patch}} to patch the contents of the definition found at the
+global name (see {{Section 4 of -sdf}}) with the contents of the
+original JSON map, i.e., the definition containing the sdfRef quality
+with the entry for the sdfRef quality removed.
+The result of that Merge Patch is then used in place of the value of
+the original JSON map.
+
+## Constructing a Link from an Organization's Ecosystem
+
+If the organization `example.com` provides a definition for an
+`idlink` that is intended to be referenced to obtain more information
+about the sdfObject `myObj`, this could look like:
+
+~~~json
+{
+  "namespaces": {
+    "org": "https://models.example.com/",
+    "orgtypes": "https://models.example.com/#/sdfData/"
+  },
+  "defaultNamespace": "org",
+  "sdfObject": {
+    "myObj": {
+      "sdfProperty": {
+        "linkToInformation": {
+          "description": "More info about foo",
+          "sdfRef": "orgtypes:idlink"
+        }
+      }
+    }
+  }
+}
+~~~
+
+This example assumes `example.com` has exported a definition for
+`idlink` such as the following:
+
+~~~json
+{
+  "namespace": {
+    "org": "https://models.example.com/"
+  },
+  "sdfData": {
+    "idlink": {
+      "description": "Special kind of link type example org uses",
+      "type": "object",
+      "sdfType": "link",
+      "properties": {
+        "href": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "minvalue": 0,
+          "maxvalue": 255,
+          "description": "Special identifier for metadata about this link"
+        }
+      }
+    }
+  }
+}
+
+
+
+~~~
+
+## Using with OMA test object
+
+As a more specific example, the following assumes that
+`openmobilealliance.org` has provided a definition under `objlink` for
+the Object Links defined for LWM2M.
+[^addref]
+
+[^addref]: Add reference!
+
+~~~json
+{
+  "info": {
+    "title": "OMA LwM2M LwM2M v1.1 Test Object (Object ID 3442)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/",
+    "omatypes": "https://models.openmobilealliance.org/#/sdfData/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+      "LwM2M_v1.1_Test_Object": {
+      "label": "LwM2M v1.1 Test Object",
+      "description": "This object aims to make it easier to do interoperability tests about LWM2M v1.1. It contains resources for each available datatype.",
+      "oma:id": 3442,
+      "sdfProperty": {
+        "ObjLink_Value": {
+          "label": "ObjLnk Value",
+          "description": "Initial value must be a link to instance 0 of Device Object 3 (3:0).",
+          "oma:id": 170,
+          "sdfRef": "omatypes:objlink",
+          "properties": {
+              "object-instance-id": {
+                  "$comment": "Example of refinement of link attribute",
+                  "maximum": 42
+              }
+          }
+        },
+        "CoreLnk_Value": {
+          "label": "CoreLnk Value",
+          "description": "Initial value must be a the \"</3442>\".",
+          "oma:id": 180,
+          "sdfRef": "omatypes:corelink"
+        }
+      }
+    }
+  }
+}
+~~~
+
+The following is a potential definition that openmobilealliance.org
+could export that provides `sdfRef`-friendly descriptions of LWM2M
+core links as well as the more LWM2M specific object links:
+
+~~~json
+{
+  "info": {
+    "description": "Common data type definitions for OMA LwM2M models",
+    "copyright": "Copyright 2025 Open Mobile Alliance",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfData": {
+    "corelink": {
+      "description": "CoRE link format link",
+      "$comment": "See https://md2html-tool.com/docs/OpenMobileAlliance/LwM2M/master/e58dc1c/TS_Core/OMA-TS-LightweightM2M_Core-V1_2_2-20240613-A_full.html#Table-732-1-lessNOTIFICATIONgreater-class-Attributes",
+      "type": "object",
+      "sdfType": "link",
+      "properties": {
+        "href": {
+          "type": "string"
+        },
+        "pmin": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pmax": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "gt": {
+          "type": "number"
+        },
+        "lt": {
+          "type": "number"
+        },
+        "st": {
+          "type": "number"
+        },
+        "epmin": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "epmax": {
+          "type": "integer"
+        },
+        "edge": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "con": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "hqmax": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "dim": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "ssid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535
+        },
+        "uri": {
+          "type": "string"
+        },
+        "ver": {
+          "type": "string"
+        },
+        "lwm2m": {
+          "type": "string"
+        },
+        "_other": {
+          "type": "array",
+          "items":{
+            "type": "string"
+          }
+        }
+      }
+    },
+    "objlink": {
+      "description": "OMA LwM2M Object link",
+      "type": "object",
+      "sdfType": "link",
+      "properties": {
+        "object-id": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "object-instance-id": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      }
+    }
+  }
+}
+~~~
+
 
 # Acknowledgments
 {:unnumbered}
