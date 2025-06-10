@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-08T01:15:12.302855+00:00",
+  "timestamp": "2025-06-10T01:10:22.856101+00:00",
   "repo": "cabo/sdftype-link",
   "labels": [
     {
@@ -50,5 +50,119 @@
     }
   ],
   "issues": [],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOIhJ6ZM6Ztjsf",
+      "title": "Add appendix with examples",
+      "url": "https://github.com/cabo/sdftype-link/pull/1",
+      "state": "OPEN",
+      "author": "cabo",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-09T16:29:11Z",
+      "updatedAt": "2025-06-09T19:53:48Z",
+      "baseRepository": "cabo/sdftype-link",
+      "baseRefName": "main",
+      "baseRefOid": "d3b63b8d5b569a8907b40a7fc050b282deca5705",
+      "headRepository": "cabo/sdftype-link",
+      "headRefName": "more-examples",
+      "headRefOid": "93f335f3a5cb143034a31dc58c13e61276ecc463",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOIhJ6ZM6tgtUP",
+          "commit": {
+            "abbreviatedOid": "227ff14"
+          },
+          "author": "akeranen",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-09T19:04:15Z",
+          "updatedAt": "2025-06-09T19:04:15Z",
+          "comments": [
+            {
+              "originalPosition": 298,
+              "body": "```suggestion\r\n          \"description\": \"Initial value must be \\\"</3442>\\\".\",\r\n```",
+              "createdAt": "2025-06-09T19:04:15Z",
+              "updatedAt": "2025-06-09T19:04:15Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIhJ6ZM6tg8OV",
+          "commit": {
+            "abbreviatedOid": "2e2fa92"
+          },
+          "author": "akeranen",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-09T19:25:38Z",
+          "updatedAt": "2025-06-09T19:25:39Z",
+          "comments": [
+            {
+              "originalPosition": 124,
+              "body": "```suggestion\r\n    \"version\": \"1.0\",\r\n```",
+              "createdAt": "2025-06-09T19:25:38Z",
+              "updatedAt": "2025-06-09T19:25:39Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIhJ6ZM6tg-Dj",
+          "commit": {
+            "abbreviatedOid": "2e2fa92"
+          },
+          "author": "akeranen",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-09T19:28:11Z",
+          "updatedAt": "2025-06-09T19:28:12Z",
+          "comments": [
+            {
+              "originalPosition": 115,
+              "body": "```suggestion\r\nthe Object Links defined for LwM2M.\r\n```",
+              "createdAt": "2025-06-09T19:28:12Z",
+              "updatedAt": "2025-06-09T19:28:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIhJ6ZM6tg-Rt",
+          "commit": {
+            "abbreviatedOid": "2e2fa92"
+          },
+          "author": "akeranen",
+          "authorAssociation": "NONE",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-06-09T19:28:35Z",
+          "updatedAt": "2025-06-09T19:29:10Z",
+          "comments": [
+            {
+              "originalPosition": 164,
+              "body": "```suggestion\r\ncould export that provides `sdfRef`-friendly descriptions of LwM2M\r\n```",
+              "createdAt": "2025-06-09T19:28:35Z",
+              "updatedAt": "2025-06-09T19:29:10Z"
+            },
+            {
+              "originalPosition": 165,
+              "body": "```suggestion\r\ncore links as well as the more LwM2M specific object links:\r\n```",
+              "createdAt": "2025-06-09T19:28:46Z",
+              "updatedAt": "2025-06-09T19:29:10Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
