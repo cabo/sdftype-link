@@ -6,30 +6,30 @@
 <meta content="initial-scale=1.0" name="viewport">
 <title>An sdfType for Links</title>
 <meta content="Carsten Bormann" name="author">
+<meta content="Ari Keränen" name="author">
 <meta content='
        This document defines and registers an sdfType "link" for the
 Semantic Definition Format (SDF) for Data and Interactions of Things
 (draft-ietf-asdf-sdf). 
     ' name="description">
-<meta content="xml2rfc 3.28.1" name="generator">
+<meta content="xml2rfc 3.31.0" name="generator">
 <meta content="IoT" name="keyword">
 <meta content="Link" name="keyword">
 <meta content="Web Linking" name="keyword">
 <meta content="draft-ietf-asdf-sdftype-link-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.28.1
-    Python 3.12.10
+  xml2rfc 3.31.0
+    Python 3.12.12
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.6
-    lxml 5.3.1
-    platformdirs 4.3.8
+    lxml 6.0.2
+    platformdirs 4.5.1
     pycountry 24.6.1
-    PyYAML 6.0.2
-    requests 2.32.3
-    setuptools 80.9.0
-    wcwidth 0.2.13
+    PyYAML 6.0.3
+    requests 2.32.5
+    wcwidth 0.2.14
 -->
 <link href="draft-ietf-asdf-sdftype-link.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1048,11 +1048,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">sdfType for Links</td>
-<td class="right">June 2025</td>
+<td class="right">December 2025</td>
 </tr></thead>
 <tfoot><tr>
-<td class="left">Bormann</td>
-<td class="center">Expires 11 December 2025</td>
+<td class="left">Bormann &amp; Keränen</td>
+<td class="center">Expires 22 June 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1065,17 +1065,21 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-asdf-sdftype-link-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-06-09" class="published">9 June 2025</time>
+<time datetime="2025-12-19" class="published">19 December 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-12-11">11 December 2025</time></dd>
-<dt class="label-authors">Author:</dt>
+<dd class="expires"><time datetime="2026-06-22">22 June 2026</time></dd>
+<dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
       <div class="author-name">C. Bormann</div>
 <div class="org">Universität Bremen TZI</div>
+</div>
+<div class="author">
+      <div class="author-name">A. Keränen</div>
+<div class="org">Ericsson</div>
 </div>
 </dd>
 </dl>
@@ -1121,7 +1125,7 @@ Semantic Definition Format (SDF) for Data and Interactions of Things
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 11 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 22 June 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1182,10 +1186,21 @@ Semantic Definition Format (SDF) for Data and Interactions of Things
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+            <p id="section-toc.1-1.7.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-examples" class="internal xref">Examples</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1">
+                <p id="section-toc.1-1.7.2.1.1"><a href="#appendix-A.1" class="auto internal xref">A.1</a>.  <a href="#name-constructing-a-link-from-an" class="internal xref">Constructing a Link from an Organization's Ecosystem</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.2">
+                <p id="section-toc.1-1.7.2.2.1"><a href="#appendix-A.2" class="auto internal xref">A.2</a>.  <a href="#name-using-with-oma-test-object" class="internal xref">Using with OMA test object</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-address" class="internal xref">Author's Address</a></p>
+            <p id="section-toc.1-1.8.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
+            <p id="section-toc.1-1.9.1"><a href="#appendix-C" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1270,6 +1285,7 @@ An sdfProperty for that could look like:<a href="#section-2-5" class="pilcrow">�
 }
 </pre><a href="#section-2-6" class="pilcrow">¶</a>
 </div>
+<p id="section-2-7">Further examples that show sdfType "link" in context are in <a href="#examples" class="auto internal xref">Appendix A</a>.<a href="#section-2-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="discussion">
@@ -1375,7 +1391,7 @@ registration template:<a href="#section-5-2" class="pilcrow">¶</a></p>
 <dd class="break"></dd>
 <dt id="I-D.ietf-asdf-sdf">[I-D.ietf-asdf-sdf]</dt>
         <dd>
-<span class="refAuthor">Koster, M.</span>, <span class="refAuthor">Bormann, C.</span>, and <span class="refAuthor">A. Keränen</span>, <span class="refTitle">"Semantic Definition Format (SDF) for Data and Interactions of Things"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-asdf-sdf-23</span>, <time datetime="2025-03-17" class="refDate">17 March 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-23">https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-23</a>&gt;</span>. </dd>
+<span class="refAuthor">Koster, M.</span>, <span class="refAuthor">Bormann, C.</span>, and <span class="refAuthor">A. Keränen</span>, <span class="refTitle">"Semantic Definition Format (SDF) for Data and Interactions of Things"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-asdf-sdf-25</span>, <time datetime="2025-10-13" class="refDate">13 October 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-25">https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-25</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8288">[RFC8288]</dt>
       <dd>
@@ -1398,6 +1414,14 @@ registration template:<a href="#section-5-2" class="pilcrow">¶</a></p>
         <dd>
 <span class="refAuthor">Shelby, Z.</span>, <span class="refTitle">"Constrained RESTful Environments (CoRE) Link Format"</span>, <span class="seriesInfo">RFC 6690</span>, <span class="seriesInfo">DOI 10.17487/RFC6690</span>, <time datetime="2012-08" class="refDate">August 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6690">https://www.rfc-editor.org/rfc/rfc6690</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC7396">[RFC7396]</dt>
+        <dd>
+<span class="refAuthor">Hoffman, P.</span> and <span class="refAuthor">J. Snell</span>, <span class="refTitle">"JSON Merge Patch"</span>, <span class="seriesInfo">RFC 7396</span>, <span class="seriesInfo">DOI 10.17487/RFC7396</span>, <time datetime="2014-10" class="refDate">October 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7396">https://www.rfc-editor.org/rfc/rfc7396</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8792">[RFC8792]</dt>
+        <dd>
+<span class="refAuthor">Watsen, K.</span>, <span class="refAuthor">Auerswald, E.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">Q. Wu</span>, <span class="refTitle">"Handling Long Lines in Content of Internet-Drafts and RFCs"</span>, <span class="seriesInfo">RFC 8792</span>, <span class="seriesInfo">DOI 10.17487/RFC8792</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8792">https://www.rfc-editor.org/rfc/rfc8792</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC9423">[RFC9423]</dt>
       <dd>
 <span class="refAuthor">Bormann, C.</span>, <span class="refTitle">"Constrained RESTful Environments (CoRE) Target Attributes Registry"</span>, <span class="seriesInfo">RFC 9423</span>, <span class="seriesInfo">DOI 10.17487/RFC9423</span>, <time datetime="2024-04" class="refDate">April 2024</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9423">https://www.rfc-editor.org/rfc/rfc9423</a>&gt;</span>. </dd>
@@ -1407,18 +1431,278 @@ registration template:<a href="#section-5-2" class="pilcrow">¶</a></p>
 </div>
 </section>
 </div>
-<div id="acknowledgments">
+<div id="examples">
 <section id="appendix-A">
+      <h2 id="name-examples">
+<a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-examples" class="section-name selfRef">Examples</a>
+      </h2>
+<p id="appendix-A-1">sdfType "link" can be used to specify links with information specific
+to an organization's ecosystem.
+In many cases, <code>sdfRef</code> (see <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-25#section-4.4" class="relref">Section 4.4</a> of [<a href="#I-D.ietf-asdf-sdf" class="cite xref">I-D.ietf-asdf-sdf</a>]</span>) provides a
+convenient way to assemble the link specification from elements that
+are generic for an organization and elements that are specific to the
+model being defined.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<aside id="appendix-A-2">
+        <p id="appendix-A-2.1">Note that <code>sdfRef</code> operates by applying the JSON Merge Patch algorithm
+<span>[<a href="#RFC7396" class="cite xref">RFC7396</a>]</span> to patch the contents of the definition found at the
+global name (see <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-asdf-sdf-25#section-4" class="relref">Section 4</a> of [<a href="#I-D.ietf-asdf-sdf" class="cite xref">I-D.ietf-asdf-sdf</a>]</span>) with the contents of the
+original JSON map, i.e., the definition containing the sdfRef quality
+with the entry for the sdfRef quality removed.
+The result of that Merge Patch is then used in place of the value of
+the original JSON map.<a href="#appendix-A-2.1" class="pilcrow">¶</a></p>
+</aside>
+<div id="constructing-a-link-from-an-organizations-ecosystem">
+<section id="appendix-A.1">
+        <h3 id="name-constructing-a-link-from-an">
+<a href="#appendix-A.1" class="section-number selfRef">A.1. </a><a href="#name-constructing-a-link-from-an" class="section-name selfRef">Constructing a Link from an Organization's Ecosystem</a>
+        </h3>
+<p id="appendix-A.1-1">If the organization <code>example.com</code> provides a definition for an
+<code>idlink</code> that is intended to be referenced to obtain more information
+about the sdfObject <code>myObj</code>, this could look like:<a href="#appendix-A.1-1" class="pilcrow">¶</a></p>
+<div class="lang-json sourcecode" id="appendix-A.1-2">
+<pre>
+{
+  "namespaces": {
+    "org": "https://models.example.com/",
+    "orgtypes": "https://models.example.com/#/sdfData/"
+  },
+  "defaultNamespace": "org",
+  "sdfObject": {
+    "myObj": {
+      "sdfProperty": {
+        "linkToInformation": {
+          "description": "More info about foo",
+          "sdfRef": "orgtypes:idlink"
+        }
+      }
+    }
+  }
+}
+</pre><a href="#appendix-A.1-2" class="pilcrow">¶</a>
+</div>
+<p id="appendix-A.1-3">This example assumes <code>example.com</code> has exported a definition for
+<code>idlink</code> such as the following:<a href="#appendix-A.1-3" class="pilcrow">¶</a></p>
+<div class="lang-json sourcecode" id="appendix-A.1-4">
+<pre>
+{
+  "namespace": {
+    "org": "https://models.example.com/"
+  },
+  "sdfData": {
+    "idlink": {
+      "description": "Special kind of link type example org uses",
+      "type": "object",
+      "sdfType": "link",
+      "properties": {
+        "href": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "minvalue": 0,
+          "maxvalue": 255,
+          "description":
+            "Special identifier for metadata about this link"
+        }
+      }
+    }
+  }
+}
+
+
+
+</pre><a href="#appendix-A.1-4" class="pilcrow">¶</a>
+</div>
+</section>
+</div>
+<div id="using-with-oma-test-object">
+<section id="appendix-A.2">
+        <h3 id="name-using-with-oma-test-object">
+<a href="#appendix-A.2" class="section-number selfRef">A.2. </a><a href="#name-using-with-oma-test-object" class="section-name selfRef">Using with OMA test object</a>
+        </h3>
+<p id="appendix-A.2-1">As a more specific example, the following assumes that
+<code>openmobilealliance.org</code> has provided a definition under <code>objlink</code> for
+the Object Links defined for LwM2M.
+<span class="cref" id="addref">Add reference!</span><a href="#appendix-A.2-1" class="pilcrow">¶</a></p>
+<div class="lang-json sourcecode" id="appendix-A.2-2">
+<pre>=============== NOTE: '\' line wrapping per RFC 8792 ================
+
+{
+  "info": {
+    "title": "OMA LwM2M LwM2M v1.1 Test Object (Object ID 3442)",
+    "version": "2025-05-05",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/",
+    "omatypes": "https://models.openmobilealliance.org/#/sdfData/"
+  },
+  "defaultNamespace": "oma",
+  "sdfObject": {
+    "LwM2M_v1.1_Test_Object": {
+      "label": "LwM2M v1.1 Test Object",
+      "$comment": "Simplified version of OMA Test Object with only \
+                                            two link type resources",
+      "oma:id": 3442,
+      "sdfProperty": {
+        "ObjLink_Value": {
+          "label": "ObjLnk Value",
+          "description": "Initial value must be a link to instance \
+                                        0 of Device Object 3 (3:0).",
+          "oma:id": 170,
+          "sdfRef": "omatypes:objlink",
+          "properties": {
+            "object-instance-id": {
+              "$comment": "Example of refinement of link attribute",
+              "maximum": 42
+            }
+          }
+        },
+        "CoreLnk_Value": {
+          "label": "CoreLnk Value",
+          "description": "Initial value must be \"&lt;/3442&gt;\".",
+          "oma:id": 180,
+          "sdfRef": "omatypes:corelink"
+        }
+      }
+    }
+  }
+}
+</pre><a href="#appendix-A.2-2" class="pilcrow">¶</a>
+</div>
+<p id="appendix-A.2-3">The following is a potential definition that openmobilealliance.org
+could export that provides <code>sdfRef</code>-friendly descriptions of LwM2M
+core links as well as the more LwM2M specific object links:<a href="#appendix-A.2-3" class="pilcrow">¶</a></p>
+<div class="breakable lang-json sourcecode" id="appendix-A.2-4">
+<pre>=============== NOTE: '\' line wrapping per RFC 8792 ================
+
+{
+  "info": {
+    "description":
+      "Common data type definitions for OMA LwM2M models",
+    "copyright": "Copyright 2025 Open Mobile Alliance",
+    "license": "BSD-3-Clause"
+  },
+  "namespace": {
+    "oma": "https://models.openmobilealliance.org/"
+  },
+  "defaultNamespace": "oma",
+  "sdfData": {
+    "corelink": {
+      "description": "CoRE link format link",
+      "$comment": "See https://md2html-tool.com/docs/\
+OpenMobileAlliance/LwM2M/master/e58dc1c/TS_Core/OMA-TS-\
+LightweightM2M_Core-V1_2_2-20240613-A_full.html#Table-732-1-\
+                           lessNOTIFICATIONgreater-class-Attributes",
+      "type": "object",
+      "sdfType": "link",
+      "properties": {
+        "href": {
+          "type": "string"
+        },
+        "pmin": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pmax": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "gt": {
+          "type": "number"
+        },
+        "lt": {
+          "type": "number"
+        },
+        "st": {
+          "type": "number"
+        },
+        "epmin": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "epmax": {
+          "type": "integer"
+        },
+        "edge": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "con": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "hqmax": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "dim": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "ssid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 65535
+        },
+        "uri": {
+          "type": "string"
+        },
+        "ver": {
+          "type": "string"
+        },
+        "lwm2m": {
+          "type": "string"
+        },
+        "_other": {
+          "type": "array",
+          "items":{
+            "type": "string"
+          }
+        }
+      }
+    },
+    "objlink": {
+      "description": "OMA LwM2M Object link",
+      "type": "object",
+      "sdfType": "link",
+      "properties": {
+        "object-id": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "object-instance-id": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      }
+    }
+  }
+}
+</pre><a href="#appendix-A.2-4" class="pilcrow">¶</a>
+</div>
+</section>
+</div>
+</section>
+</div>
+<div id="acknowledgments">
+<section id="appendix-B">
       <h2 id="name-acknowledgments">
 <a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
       </h2>
-<p id="appendix-A-1">Discussions in the OneDM liaison organization shaped this proposal.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<p id="appendix-B-1">Discussions in the OneDM liaison organization shaped this proposal.<a href="#appendix-B-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
-<section id="appendix-B">
-      <h2 id="name-authors-address">
-<a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
+<section id="appendix-C">
+      <h2 id="name-authors-addresses">
+<a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>
 <address class="vcard">
         <div dir="auto" class="left"><span class="fn nameRole">Carsten Bormann</span></div>
@@ -1435,6 +1719,17 @@ registration template:<a href="#section-5-2" class="pilcrow">¶</a></p>
 <div class="email">
 <span>Email:</span>
 <a href="mailto:cabo@tzi.org" class="email">cabo@tzi.org</a>
+</div>
+</address>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Ari Keränen</span></div>
+<div dir="auto" class="left"><span class="org">Ericsson</span></div>
+<div dir="auto" class="left">FI-<span class="postal-code">02420</span> <span class="locality">Jorvas</span>
+</div>
+<div dir="auto" class="left"><span class="country-name">Finland</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:ari.keranen@ericsson.com" class="email">ari.keranen@ericsson.com</a>
 </div>
 </address>
 </section>

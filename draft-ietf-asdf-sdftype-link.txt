@@ -4,8 +4,9 @@
 
 ASDF WG                                                       C. Bormann
 Internet-Draft                                    Universität Bremen TZI
-Intended status: Standards Track                             9 June 2025
-Expires: 11 December 2025
+Intended status: Standards Track                              A. Keränen
+Expires: 22 June 2026                                           Ericsson
+                                                        19 December 2025
 
 
                           An sdfType for Links
@@ -48,14 +49,13 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 December 2025.
+   This Internet-Draft will expire on 22 June 2026.
 
 
 
-
-Bormann                 Expires 11 December 2025                [Page 1]
+Bormann & Keränen         Expires 22 June 2026                  [Page 1]
 
-Internet-Draft              sdfType for Links                  June 2025
+Internet-Draft              sdfType for Links              December 2025
 
 
 Copyright Notice
@@ -78,13 +78,16 @@ Table of Contents
      1.1.  Conventions and Definitions . . . . . . . . . . . . . . .   3
    2.  The sdfType "link"  . . . . . . . . . . . . . . . . . . . . .   3
    3.  Discussion  . . . . . . . . . . . . . . . . . . . . . . . . .   4
-   4.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
-   5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   4
+   4.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
+   5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   5
    6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   5
      6.1.  Normative References  . . . . . . . . . . . . . . . . . .   5
-     6.2.  Informative References  . . . . . . . . . . . . . . . . .   5
-   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .   6
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   6
+     6.2.  Informative References  . . . . . . . . . . . . . . . . .   6
+   Appendix A.  Examples . . . . . . . . . . . . . . . . . . . . . .   6
+     A.1.  Constructing a Link from an Organization's Ecosystem  . .   7
+     A.2.  Using with OMA test object  . . . . . . . . . . . . . . .   8
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  12
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  12
 
 1.  Introduction
 
@@ -101,18 +104,20 @@ Table of Contents
    attributes" that provide additional information about the target of
    the link (without a need to "dereference", i.e., follow, the link).
 
+
+
+
+
+
+Bormann & Keränen         Expires 22 June 2026                  [Page 2]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
    This document defines and registers an sdfType "link" for the
    Semantic Definition Format.  This type models an abstract
    "serialization" [RFC8288] of a link, in a way that is compatible with
    the way SDF maps information models to its data modeling language.
-
-
-
-
-Bormann                 Expires 11 December 2025                [Page 2]
-
-Internet-Draft              sdfType for Links                  June 2025
-
 
 1.1.  Conventions and Definitions
 
@@ -149,6 +154,22 @@ Internet-Draft              sdfType for Links                  June 2025
    instance-specific (run-time) information on the actual URI that
    points to the link target.  An sdfProperty for that could look like:
 
+
+
+
+
+
+
+
+
+
+
+
+Bormann & Keränen         Expires 22 June 2026                  [Page 3]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
    {
     "sdfProperty": {
      "temp-c-link": {
@@ -163,12 +184,8 @@ Internet-Draft              sdfType for Links                  June 2025
     }
    }
 
-
-
-Bormann                 Expires 11 December 2025                [Page 3]
-
-Internet-Draft              sdfType for Links                  June 2025
-
+   Further examples that show sdfType "link" in context are in
+   Appendix A.
 
 3.  Discussion
 
@@ -196,6 +213,19 @@ Internet-Draft              sdfType for Links                  June 2025
    TODO: Examples are needed to show how the OCF collection pattern is
    addressed by the current specification.
 
+
+
+
+
+
+
+
+
+Bormann & Keränen         Expires 22 June 2026                  [Page 4]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
 4.  Security Considerations
 
    The security considerations of [RFC8288] apply in a general way,
@@ -213,18 +243,6 @@ Internet-Draft              sdfType for Links                  June 2025
    IANA is requested to register the sdfType "link" in the "sdfType
    Values" sub-registry in the "SDF Parameters" registry, with the
    following completion for the registration template:
-
-
-
-
-
-
-
-
-Bormann                 Expires 11 December 2025                [Page 4]
-
-Internet-Draft              sdfType for Links                  June 2025
-
 
      +======+=============+========+=====================+===========+
      | Name | Description | type   | JSON Representation | Reference |
@@ -256,9 +274,17 @@ Internet-Draft              sdfType for Links                  June 2025
               Koster, M., Bormann, C., and A. Keränen, "Semantic
               Definition Format (SDF) for Data and Interactions of
               Things", Work in Progress, Internet-Draft, draft-ietf-
-              asdf-sdf-23, 17 March 2025,
+
+
+
+Bormann & Keränen         Expires 22 June 2026                  [Page 5]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
+              asdf-sdf-25, 13 October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-asdf-
-              sdf-23>.
+              sdf-25>.
 
    [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
               DOI 10.17487/RFC8288, October 2017,
@@ -273,29 +299,345 @@ Internet-Draft              sdfType for Links                  June 2025
               <https://datatracker.ietf.org/doc/html/draft-laari-asdf-
               relations-04>.
 
-
-
-
-
-Bormann                 Expires 11 December 2025                [Page 5]
-
-Internet-Draft              sdfType for Links                  June 2025
-
-
    [RFC6690]  Shelby, Z., "Constrained RESTful Environments (CoRE) Link
               Format", RFC 6690, DOI 10.17487/RFC6690, August 2012,
               <https://www.rfc-editor.org/rfc/rfc6690>.
+
+   [RFC7396]  Hoffman, P. and J. Snell, "JSON Merge Patch", RFC 7396,
+              DOI 10.17487/RFC7396, October 2014,
+              <https://www.rfc-editor.org/rfc/rfc7396>.
+
+   [RFC8792]  Watsen, K., Auerswald, E., Farrel, A., and Q. Wu,
+              "Handling Long Lines in Content of Internet-Drafts and
+              RFCs", RFC 8792, DOI 10.17487/RFC8792, June 2020,
+              <https://www.rfc-editor.org/rfc/rfc8792>.
 
    [RFC9423]  Bormann, C., "Constrained RESTful Environments (CoRE)
               Target Attributes Registry", RFC 9423,
               DOI 10.17487/RFC9423, April 2024,
               <https://www.rfc-editor.org/rfc/rfc9423>.
 
+Appendix A.  Examples
+
+   sdfType "link" can be used to specify links with information specific
+   to an organization's ecosystem.  In many cases, sdfRef (see
+   Section 4.4 of [I-D.ietf-asdf-sdf]) provides a convenient way to
+   assemble the link specification from elements that are generic for an
+   organization and elements that are specific to the model being
+   defined.
+
+      |  Note that sdfRef operates by applying the JSON Merge Patch
+      |  algorithm [RFC7396] to patch the contents of the definition
+      |  found at the global name (see Section 4 of [I-D.ietf-asdf-sdf])
+      |  with the contents of the original JSON map, i.e., the
+
+
+
+Bormann & Keränen         Expires 22 June 2026                  [Page 6]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
+      |  definition containing the sdfRef quality with the entry for the
+      |  sdfRef quality removed.  The result of that Merge Patch is then
+      |  used in place of the value of the original JSON map.
+
+A.1.  Constructing a Link from an Organization's Ecosystem
+
+   If the organization example.com provides a definition for an idlink
+   that is intended to be referenced to obtain more information about
+   the sdfObject myObj, this could look like:
+
+   {
+     "namespaces": {
+       "org": "https://models.example.com/",
+       "orgtypes": "https://models.example.com/#/sdfData/"
+     },
+     "defaultNamespace": "org",
+     "sdfObject": {
+       "myObj": {
+         "sdfProperty": {
+           "linkToInformation": {
+             "description": "More info about foo",
+             "sdfRef": "orgtypes:idlink"
+           }
+         }
+       }
+     }
+   }
+
+   This example assumes example.com has exported a definition for idlink
+   such as the following:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann & Keränen         Expires 22 June 2026                  [Page 7]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
+   {
+     "namespace": {
+       "org": "https://models.example.com/"
+     },
+     "sdfData": {
+       "idlink": {
+         "description": "Special kind of link type example org uses",
+         "type": "object",
+         "sdfType": "link",
+         "properties": {
+           "href": {
+             "type": "string"
+           },
+           "id": {
+             "type": "integer",
+             "minvalue": 0,
+             "maxvalue": 255,
+             "description":
+               "Special identifier for metadata about this link"
+           }
+         }
+       }
+     }
+   }
+
+A.2.  Using with OMA test object
+
+   As a more specific example, the following assumes that
+   openmobilealliance.org has provided a definition under objlink for
+   the Object Links defined for LwM2M.
+   // Add reference!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bormann & Keränen         Expires 22 June 2026                  [Page 8]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
+
+   {
+     "info": {
+       "title": "OMA LwM2M LwM2M v1.1 Test Object (Object ID 3442)",
+       "version": "2025-05-05",
+       "copyright": "Copyright (c) 2018-2020 IPSO",
+       "license": "BSD-3-Clause"
+     },
+     "namespace": {
+       "oma": "https://models.openmobilealliance.org/",
+       "omatypes": "https://models.openmobilealliance.org/#/sdfData/"
+     },
+     "defaultNamespace": "oma",
+     "sdfObject": {
+       "LwM2M_v1.1_Test_Object": {
+         "label": "LwM2M v1.1 Test Object",
+         "$comment": "Simplified version of OMA Test Object with only \
+                                               two link type resources",
+         "oma:id": 3442,
+         "sdfProperty": {
+           "ObjLink_Value": {
+             "label": "ObjLnk Value",
+             "description": "Initial value must be a link to instance \
+                                           0 of Device Object 3 (3:0).",
+             "oma:id": 170,
+             "sdfRef": "omatypes:objlink",
+             "properties": {
+               "object-instance-id": {
+                 "$comment": "Example of refinement of link attribute",
+                 "maximum": 42
+               }
+             }
+           },
+           "CoreLnk_Value": {
+             "label": "CoreLnk Value",
+             "description": "Initial value must be \"</3442>\".",
+             "oma:id": 180,
+             "sdfRef": "omatypes:corelink"
+           }
+         }
+       }
+     }
+   }
+
+   The following is a potential definition that openmobilealliance.org
+   could export that provides sdfRef-friendly descriptions of LwM2M core
+   links as well as the more LwM2M specific object links:
+
+
+
+Bormann & Keränen         Expires 22 June 2026                  [Page 9]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
+
+   {
+     "info": {
+       "description":
+         "Common data type definitions for OMA LwM2M models",
+       "copyright": "Copyright 2025 Open Mobile Alliance",
+       "license": "BSD-3-Clause"
+     },
+     "namespace": {
+       "oma": "https://models.openmobilealliance.org/"
+     },
+     "defaultNamespace": "oma",
+     "sdfData": {
+       "corelink": {
+         "description": "CoRE link format link",
+         "$comment": "See https://md2html-tool.com/docs/\
+   OpenMobileAlliance/LwM2M/master/e58dc1c/TS_Core/OMA-TS-\
+   LightweightM2M_Core-V1_2_2-20240613-A_full.html#Table-732-1-\
+                              lessNOTIFICATIONgreater-class-Attributes",
+         "type": "object",
+         "sdfType": "link",
+         "properties": {
+           "href": {
+             "type": "string"
+           },
+           "pmin": {
+             "type": "integer",
+             "minimum": 0
+           },
+           "pmax": {
+             "type": "integer",
+             "minimum": 0
+           },
+           "gt": {
+             "type": "number"
+           },
+           "lt": {
+             "type": "number"
+           },
+           "st": {
+             "type": "number"
+           },
+           "epmin": {
+             "type": "integer",
+             "minimum": 0
+           },
+           "epmax": {
+
+
+
+Bormann & Keränen         Expires 22 June 2026                 [Page 10]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
+             "type": "integer"
+           },
+           "edge": {
+             "type": "integer",
+             "minimum": 0,
+             "maximum": 1
+           },
+           "con": {
+             "type": "integer",
+             "minimum": 0,
+             "maximum": 1
+           },
+           "hqmax": {
+             "type": "integer",
+             "minimum": 0
+           },
+           "dim": {
+             "type": "integer",
+             "minimum": 0,
+             "maximum": 65535
+           },
+           "ssid": {
+             "type": "integer",
+             "minimum": 1,
+             "maximum": 65535
+           },
+           "uri": {
+             "type": "string"
+           },
+           "ver": {
+             "type": "string"
+           },
+           "lwm2m": {
+             "type": "string"
+           },
+           "_other": {
+             "type": "array",
+             "items":{
+               "type": "string"
+             }
+           }
+         }
+       },
+       "objlink": {
+         "description": "OMA LwM2M Object link",
+         "type": "object",
+         "sdfType": "link",
+         "properties": {
+
+
+
+Bormann & Keränen         Expires 22 June 2026                 [Page 11]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
+           "object-id": {
+             "type": "integer",
+             "minimum": 0,
+             "maximum": 65535
+           },
+           "object-instance-id": {
+             "type": "integer",
+             "minimum": 0,
+             "maximum": 65535
+           }
+         }
+       }
+     }
+   }
+
 Acknowledgments
 
    Discussions in the OneDM liaison organization shaped this proposal.
 
-Author's Address
+Authors' Addresses
 
    Carsten Bormann
    Universität Bremen TZI
@@ -306,6 +648,11 @@ Author's Address
    Email: cabo@tzi.org
 
 
+   Ari Keränen
+   Ericsson
+   FI-02420 Jorvas
+   Finland
+   Email: ari.keranen@ericsson.com
 
 
 
@@ -322,15 +669,4 @@ Author's Address
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-Bormann                 Expires 11 December 2025                [Page 6]
+Bormann & Keränen         Expires 22 June 2026                 [Page 12]
