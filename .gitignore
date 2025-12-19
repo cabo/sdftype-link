@@ -19,6 +19,7 @@
 Gemfile.lock
 archive.json
 draft-ietf-asdf-sdftype-link.xml
+draft-ietf-asdf-sdftype-link.v2v3.xml
 package-lock.json
 report.xml
 !requirements.txt

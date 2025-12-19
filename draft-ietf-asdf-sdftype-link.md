@@ -177,7 +177,7 @@ the "SDF Parameters" registry, with the following completion for the
 registration template:
 
 | Name | Description        | type   | JSON Representation                | Reference |
-|------+--------------------+--------+------------------------------------+-----------|
+|------|--------------------|--------|------------------------------------|-----------|
 | link | A Web Link {{-link}} | object | object members for link attributes | RFCXXXX   |
 {: #sdftype-r title="Registration for sdfType \"link\""}
 
@@ -427,6 +427,7 @@ core links as well as the more LwM2M specific object links:
 ~~~
 {: post="fold"}
 
+{::include-all lists.md}
 
 # Acknowledgments
 {:unnumbered}
