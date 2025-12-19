@@ -48,6 +48,7 @@ informative:
   RFC7396: merge-patch
   I-D.laari-asdf-relations: sdfrel
   RFC9423: attr
+  RFC8792: fold
 
 --- abstract
 
@@ -248,7 +249,8 @@ This example assumes `example.com` has exported a definition for
           "type": "integer",
           "minvalue": 0,
           "maxvalue": 255,
-          "description": "Special identifier for metadata about this link"
+          "description":
+            "Special identifier for metadata about this link"
         }
       }
     }
@@ -293,10 +295,10 @@ the Object Links defined for LwM2M.
           "oma:id": 170,
           "sdfRef": "omatypes:objlink",
           "properties": {
-              "object-instance-id": {
-                  "$comment": "Example of refinement of link attribute",
-                  "maximum": 42
-              }
+            "object-instance-id": {
+              "$comment": "Example of refinement of link attribute",
+              "maximum": 42
+            }
           }
         },
         "CoreLnk_Value": {
@@ -310,6 +312,7 @@ the Object Links defined for LwM2M.
   }
 }
 ~~~
+{: post="fold"}
 
 The following is a potential definition that openmobilealliance.org
 could export that provides `sdfRef`-friendly descriptions of LwM2M
@@ -318,7 +321,8 @@ core links as well as the more LwM2M specific object links:
 ~~~json
 {
   "info": {
-    "description": "Common data type definitions for OMA LwM2M models",
+    "description":
+      "Common data type definitions for OMA LwM2M models",
     "copyright": "Copyright 2025 Open Mobile Alliance",
     "license": "BSD-3-Clause"
   },
@@ -421,6 +425,7 @@ core links as well as the more LwM2M specific object links:
   }
 }
 ~~~
+{: post="fold"}
 
 
 # Acknowledgments
