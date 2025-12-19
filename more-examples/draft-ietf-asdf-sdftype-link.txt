@@ -5,8 +5,8 @@
 ASDF WG                                                       C. Bormann
 Internet-Draft                                    Universität Bremen TZI
 Intended status: Standards Track                              A. Keränen
-Expires: 11 December 2025                                       Ericsson
-                                                             9 June 2025
+Expires: 22 June 2026                                           Ericsson
+                                                        19 December 2025
 
 
                           An sdfType for Links
@@ -49,13 +49,13 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 December 2025.
+   This Internet-Draft will expire on 22 June 2026.
 
 
 
-Bormann & Keränen       Expires 11 December 2025                [Page 1]
+Bormann & Keränen         Expires 22 June 2026                  [Page 1]
 
-Internet-Draft              sdfType for Links                  June 2025
+Internet-Draft              sdfType for Links              December 2025
 
 
 Copyright Notice
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann & Keränen       Expires 11 December 2025                [Page 2]
+Bormann & Keränen         Expires 22 June 2026                  [Page 2]
 
-Internet-Draft              sdfType for Links                  June 2025
+Internet-Draft              sdfType for Links              December 2025
 
 
    This document defines and registers an sdfType "link" for the
@@ -165,9 +165,9 @@ Internet-Draft              sdfType for Links                  June 2025
 
 
 
-Bormann & Keränen       Expires 11 December 2025                [Page 3]
+Bormann & Keränen         Expires 22 June 2026                  [Page 3]
 
-Internet-Draft              sdfType for Links                  June 2025
+Internet-Draft              sdfType for Links              December 2025
 
 
    {
@@ -221,9 +221,9 @@ Internet-Draft              sdfType for Links                  June 2025
 
 
 
-Bormann & Keränen       Expires 11 December 2025                [Page 4]
+Bormann & Keränen         Expires 22 June 2026                  [Page 4]
 
-Internet-Draft              sdfType for Links                  June 2025
+Internet-Draft              sdfType for Links              December 2025
 
 
 4.  Security Considerations
@@ -277,14 +277,14 @@ Internet-Draft              sdfType for Links                  June 2025
 
 
 
-Bormann & Keränen       Expires 11 December 2025                [Page 5]
+Bormann & Keränen         Expires 22 June 2026                  [Page 5]
 
-Internet-Draft              sdfType for Links                  June 2025
+Internet-Draft              sdfType for Links              December 2025
 
 
-              asdf-sdf-23, 17 March 2025,
+              asdf-sdf-25, 13 October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-asdf-
-              sdf-23>.
+              sdf-25>.
 
    [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
               DOI 10.17487/RFC8288, October 2017,
@@ -307,6 +307,11 @@ Internet-Draft              sdfType for Links                  June 2025
               DOI 10.17487/RFC7396, October 2014,
               <https://www.rfc-editor.org/rfc/rfc7396>.
 
+   [RFC8792]  Watsen, K., Auerswald, E., Farrel, A., and Q. Wu,
+              "Handling Long Lines in Content of Internet-Drafts and
+              RFCs", RFC 8792, DOI 10.17487/RFC8792, June 2020,
+              <https://www.rfc-editor.org/rfc/rfc8792>.
+
    [RFC9423]  Bormann, C., "Constrained RESTful Environments (CoRE)
               Target Attributes Registry", RFC 9423,
               DOI 10.17487/RFC9423, April 2024,
@@ -325,18 +330,17 @@ Appendix A.  Examples
       |  algorithm [RFC7396] to patch the contents of the definition
       |  found at the global name (see Section 4 of [I-D.ietf-asdf-sdf])
       |  with the contents of the original JSON map, i.e., the
+
+
+
+Bormann & Keränen         Expires 22 June 2026                  [Page 6]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
       |  definition containing the sdfRef quality with the entry for the
       |  sdfRef quality removed.  The result of that Merge Patch is then
       |  used in place of the value of the original JSON map.
-
-
-
-
-
-Bormann & Keränen       Expires 11 December 2025                [Page 6]
-
-Internet-Draft              sdfType for Links                  June 2025
-
 
 A.1.  Constructing a Link from an Organization's Ecosystem
 
@@ -385,13 +389,9 @@ A.1.  Constructing a Link from an Organization's Ecosystem
 
 
 
-
-
-
-
-Bormann & Keränen       Expires 11 December 2025                [Page 7]
+Bormann & Keränen         Expires 22 June 2026                  [Page 7]
 
-Internet-Draft              sdfType for Links                  June 2025
+Internet-Draft              sdfType for Links              December 2025
 
 
    {
@@ -411,7 +411,8 @@ Internet-Draft              sdfType for Links                  June 2025
              "type": "integer",
              "minvalue": 0,
              "maxvalue": 255,
-             "description": "Special identifier for metadata about this link"
+             "description":
+               "Special identifier for metadata about this link"
            }
          }
        }
@@ -444,11 +445,12 @@ A.2.  Using with OMA test object
 
 
 
-
-Bormann & Keränen       Expires 11 December 2025                [Page 8]
+Bormann & Keränen         Expires 22 June 2026                  [Page 8]
 
-Internet-Draft              sdfType for Links                  June 2025
+Internet-Draft              sdfType for Links              December 2025
 
+
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
 
    {
      "info": {
@@ -465,19 +467,21 @@ Internet-Draft              sdfType for Links                  June 2025
      "sdfObject": {
        "LwM2M_v1.1_Test_Object": {
          "label": "LwM2M v1.1 Test Object",
-         "$comment": "Simplified version of OMA Test Object with only two link type resources"
+         "$comment": "Simplified version of OMA Test Object with only \
+                                               two link type resources",
          "oma:id": 3442,
          "sdfProperty": {
            "ObjLink_Value": {
              "label": "ObjLnk Value",
-             "description": "Initial value must be a link to instance 0 of Device Object 3 (3:0).",
+             "description": "Initial value must be a link to instance \
+                                           0 of Device Object 3 (3:0).",
              "oma:id": 170,
              "sdfRef": "omatypes:objlink",
              "properties": {
-                 "object-instance-id": {
-                     "$comment": "Example of refinement of link attribute",
-                     "maximum": 42
-                 }
+               "object-instance-id": {
+                 "$comment": "Example of refinement of link attribute",
+                 "maximum": 42
+               }
              }
            },
            "CoreLnk_Value": {
@@ -497,18 +501,17 @@ Internet-Draft              sdfType for Links                  June 2025
 
 
 
-
-
-
-
-Bormann & Keränen       Expires 11 December 2025                [Page 9]
+Bormann & Keränen         Expires 22 June 2026                  [Page 9]
 
-Internet-Draft              sdfType for Links                  June 2025
+Internet-Draft              sdfType for Links              December 2025
 
+
+   =============== NOTE: '\' line wrapping per RFC 8792 ================
 
    {
      "info": {
-       "description": "Common data type definitions for OMA LwM2M models",
+       "description":
+         "Common data type definitions for OMA LwM2M models",
        "copyright": "Copyright 2025 Open Mobile Alliance",
        "license": "BSD-3-Clause"
      },
@@ -519,7 +522,10 @@ Internet-Draft              sdfType for Links                  June 2025
      "sdfData": {
        "corelink": {
          "description": "CoRE link format link",
-         "$comment": "See https://md2html-tool.com/docs/OpenMobileAlliance/LwM2M/master/e58dc1c/TS_Core/OMA-TS-LightweightM2M_Core-V1_2_2-20240613-A_full.html#Table-732-1-lessNOTIFICATIONgreater-class-Attributes",
+         "$comment": "See https://md2html-tool.com/docs/\
+   OpenMobileAlliance/LwM2M/master/e58dc1c/TS_Core/OMA-TS-\
+   LightweightM2M_Core-V1_2_2-20240613-A_full.html#Table-732-1-\
+                              lessNOTIFICATIONgreater-class-Attributes",
          "type": "object",
          "sdfType": "link",
          "properties": {
@@ -548,20 +554,20 @@ Internet-Draft              sdfType for Links                  June 2025
              "minimum": 0
            },
            "epmax": {
+
+
+
+Bormann & Keränen         Expires 22 June 2026                 [Page 10]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
              "type": "integer"
            },
            "edge": {
              "type": "integer",
              "minimum": 0,
              "maximum": 1
-
-
-
-Bormann & Keränen       Expires 11 December 2025               [Page 10]
-
-Internet-Draft              sdfType for Links                  June 2025
-
-
            },
            "con": {
              "type": "integer",
@@ -604,20 +610,20 @@ Internet-Draft              sdfType for Links                  June 2025
          "type": "object",
          "sdfType": "link",
          "properties": {
+
+
+
+Bormann & Keränen         Expires 22 June 2026                 [Page 11]
+
+Internet-Draft              sdfType for Links              December 2025
+
+
            "object-id": {
              "type": "integer",
              "minimum": 0,
              "maximum": 65535
            },
            "object-instance-id": {
-
-
-
-Bormann & Keränen       Expires 11 December 2025               [Page 11]
-
-Internet-Draft              sdfType for Links                  June 2025
-
-
              "type": "integer",
              "minimum": 0,
              "maximum": 65535
@@ -663,10 +669,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-
-
-Bormann & Keränen       Expires 11 December 2025               [Page 12]
+Bormann & Keränen         Expires 22 June 2026                 [Page 12]
