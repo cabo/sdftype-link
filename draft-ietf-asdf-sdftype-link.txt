@@ -86,6 +86,7 @@ Table of Contents
    Appendix A.  Examples . . . . . . . . . . . . . . . . . . . . . .   6
      A.1.  Constructing a Link from an Organization's Ecosystem  . .   7
      A.2.  Using with OMA test object  . . . . . . . . . . . . . . .   8
+   List of Tables  . . . . . . . . . . . . . . . . . . . . . . . . .  12
    Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  12
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  12
 
@@ -103,7 +104,6 @@ Table of Contents
    the relationship expressed by the link, as well as "target
    attributes" that provide additional information about the target of
    the link (without a need to "dereference", i.e., follow, the link).
-
 
 
 
@@ -633,6 +633,10 @@ Internet-Draft              sdfType for Links              December 2025
      }
    }
 
+List of Tables
+
+   Table 1:   Registration for sdfType "link"
+
 Acknowledgments
 
    Discussions in the OneDM liaison organization shaped this proposal.
@@ -653,10 +657,6 @@ Authors' Addresses
    FI-02420 Jorvas
    Finland
    Email: ari.keranen@ericsson.com
-
-
-
-
 
 
 
