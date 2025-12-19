@@ -284,7 +284,7 @@ the Object Links defined for LwM2M.
   "sdfObject": {
     "LwM2M_v1.1_Test_Object": {
       "label": "LwM2M v1.1 Test Object",
-      "$comment": "Simplified version of OMA Test Object with only two link type resources"
+      "$comment": "Simplified version of OMA Test Object with only two link type resources",
       "oma:id": 3442,
       "sdfProperty": {
         "ObjLink_Value": {
