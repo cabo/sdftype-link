@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-18T01:08:46.506073+00:00",
+  "timestamp": "2025-12-21T01:16:48.729461+00:00",
   "repo": "cabo/sdftype-link",
   "labels": [
     {
@@ -56,24 +56,26 @@
       "id": "PR_kwDOIhJ6ZM6Ztjsf",
       "title": "Add appendix with examples",
       "url": "https://github.com/cabo/sdftype-link/pull/1",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "cabo",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-06-09T16:29:11Z",
-      "updatedAt": "2025-06-09T19:53:48Z",
+      "updatedAt": "2025-12-19T08:27:22Z",
       "baseRepository": "cabo/sdftype-link",
       "baseRefName": "main",
       "baseRefOid": "d3b63b8d5b569a8907b40a7fc050b282deca5705",
       "headRepository": "cabo/sdftype-link",
       "headRefName": "more-examples",
-      "headRefOid": "93f335f3a5cb143034a31dc58c13e61276ecc463",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "7ef1e83c7b81127581d6bd9c960bb0889408c323",
+      "closedAt": "2025-12-19T08:27:22Z",
+      "mergedAt": "2025-12-19T08:27:22Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "6dd80c8467a94d519366bf25ea1ee45064efd3cf"
+      },
       "comments": [],
       "reviews": [
         {
@@ -82,7 +84,7 @@
             "abbreviatedOid": "227ff14"
           },
           "author": "akeranen",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-06-09T19:04:15Z",
@@ -102,7 +104,7 @@
             "abbreviatedOid": "2e2fa92"
           },
           "author": "akeranen",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-06-09T19:25:38Z",
@@ -122,7 +124,7 @@
             "abbreviatedOid": "2e2fa92"
           },
           "author": "akeranen",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-06-09T19:28:11Z",
@@ -142,7 +144,7 @@
             "abbreviatedOid": "2e2fa92"
           },
           "author": "akeranen",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "CHANGES_REQUESTED",
           "body": "",
           "createdAt": "2025-06-09T19:28:35Z",
@@ -159,6 +161,26 @@
               "body": "```suggestion\r\ncore links as well as the more LwM2M specific object links:\r\n```",
               "createdAt": "2025-06-09T19:28:46Z",
               "updatedAt": "2025-06-09T19:29:10Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOIhJ6ZM7WbY3J",
+          "commit": {
+            "abbreviatedOid": "2e2fa92"
+          },
+          "author": "cabo",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-12-19T08:23:20Z",
+          "updatedAt": "2025-12-19T08:23:21Z",
+          "comments": [
+            {
+              "originalPosition": 124,
+              "body": "Such a version string is not properly sortable, as is recommended in Section 3.1 of RFC-9880-to-be.",
+              "createdAt": "2025-12-19T08:23:21Z",
+              "updatedAt": "2025-12-19T08:23:21Z"
             }
           ]
         }
