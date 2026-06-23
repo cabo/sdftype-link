@@ -40,7 +40,7 @@ author:
   email: ari.keranen@ericsson.com
 
 normative:
-  I-D.ietf-asdf-sdf: sdf
+  RFC9880: sdf
   RFC8288: link
 
 informative:
