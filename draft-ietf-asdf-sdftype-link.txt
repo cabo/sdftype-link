@@ -5,8 +5,8 @@
 ASDF WG                                                       C. Bormann
 Internet-Draft                                    Universität Bremen TZI
 Intended status: Standards Track                              A. Keränen
-Expires: 22 June 2026                                           Ericsson
-                                                        19 December 2025
+Expires: 25 December 2026                                       Ericsson
+                                                            23 June 2026
 
 
                           An sdfType for Links
@@ -49,18 +49,18 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 June 2026.
+   This Internet-Draft will expire on 25 December 2026.
 
 
 
-Bormann & Keränen         Expires 22 June 2026                  [Page 1]
+Bormann & Keränen       Expires 25 December 2026                [Page 1]
 
-Internet-Draft              sdfType for Links              December 2025
+Internet-Draft              sdfType for Links                  June 2026
 
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -93,8 +93,8 @@ Table of Contents
 1.  Introduction
 
    The Semantic Definition Format for Data and Interactions of Things
-   (SDF, [I-D.ietf-asdf-sdf]) is a format for domain experts to use in
-   the creation and maintenance of data and interaction models in the
+   (SDF, [RFC9880]) is a format for domain experts to use in the
+   creation and maintenance of data and interaction models in the
    Internet of Things.
 
    A common data type that occurs in the modeling of IoT devices is the
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Bormann & Keränen         Expires 22 June 2026                  [Page 2]
+Bormann & Keränen       Expires 25 December 2026                [Page 2]
 
-Internet-Draft              sdfType for Links              December 2025
+Internet-Draft              sdfType for Links                  June 2026
 
 
    This document defines and registers an sdfType "link" for the
@@ -121,8 +121,7 @@ Internet-Draft              sdfType for Links              December 2025
 
 1.1.  Conventions and Definitions
 
-   The definitions of [RFC6690], [RFC8288], and [I-D.ietf-asdf-sdf]
-   apply.
+   The definitions of [RFC6690], [RFC8288], and [RFC9880] apply.
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -165,9 +164,10 @@ Internet-Draft              sdfType for Links              December 2025
 
 
 
-Bormann & Keränen         Expires 22 June 2026                  [Page 3]
+
+Bormann & Keränen       Expires 25 December 2026                [Page 3]
 
-Internet-Draft              sdfType for Links              December 2025
+Internet-Draft              sdfType for Links                  June 2026
 
 
    {
@@ -221,9 +221,9 @@ Internet-Draft              sdfType for Links              December 2025
 
 
 
-Bormann & Keränen         Expires 22 June 2026                  [Page 4]
+Bormann & Keränen       Expires 25 December 2026                [Page 4]
 
-Internet-Draft              sdfType for Links              December 2025
+Internet-Draft              sdfType for Links                  June 2026
 
 
 4.  Security Considerations
@@ -270,25 +270,22 @@ Internet-Draft              sdfType for Links              December 2025
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/info/rfc8174>.
 
-   [I-D.ietf-asdf-sdf]
-              Koster, M., Bormann, C., and A. Keränen, "Semantic
-              Definition Format (SDF) for Data and Interactions of
-              Things", Work in Progress, Internet-Draft, draft-ietf-
-
-
-
-Bormann & Keränen         Expires 22 June 2026                  [Page 5]
-
-Internet-Draft              sdfType for Links              December 2025
-
-
-              asdf-sdf-25, 13 October 2025,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-asdf-
-              sdf-25>.
-
    [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
               DOI 10.17487/RFC8288, October 2017,
               <https://www.rfc-editor.org/rfc/rfc8288>.
+
+
+
+
+Bormann & Keränen       Expires 25 December 2026                [Page 5]
+
+Internet-Draft              sdfType for Links                  June 2026
+
+
+   [RFC9880]  Koster, M., Ed., Bormann, C., Ed., and A. Keränen,
+              "Semantic Definition Format (SDF) for Data and
+              Interactions of Things", RFC 9880, DOI 10.17487/RFC9880,
+              January 2026, <https://www.rfc-editor.org/rfc/rfc9880>.
 
 6.2.  Informative References
 
@@ -321,26 +318,25 @@ Appendix A.  Examples
 
    sdfType "link" can be used to specify links with information specific
    to an organization's ecosystem.  In many cases, sdfRef (see
-   Section 4.4 of [I-D.ietf-asdf-sdf]) provides a convenient way to
-   assemble the link specification from elements that are generic for an
-   organization and elements that are specific to the model being
-   defined.
+   Section 4.4 of [RFC9880]) provides a convenient way to assemble the
+   link specification from elements that are generic for an organization
+   and elements that are specific to the model being defined.
 
       |  Note that sdfRef operates by applying the JSON Merge Patch
       |  algorithm [RFC7396] to patch the contents of the definition
-      |  found at the global name (see Section 4 of [I-D.ietf-asdf-sdf])
-      |  with the contents of the original JSON map, i.e., the
+      |  found at the global name (see Section 4 of [RFC9880]) with the
+      |  contents of the original JSON map, i.e., the definition
+      |  containing the sdfRef quality with the entry for the sdfRef
+      |  quality removed.  The result of that Merge Patch is then used
+      |  in place of the value of the original JSON map.
 
 
 
-Bormann & Keränen         Expires 22 June 2026                  [Page 6]
+
+Bormann & Keränen       Expires 25 December 2026                [Page 6]
 
-Internet-Draft              sdfType for Links              December 2025
+Internet-Draft              sdfType for Links                  June 2026
 
-
-      |  definition containing the sdfRef quality with the entry for the
-      |  sdfRef quality removed.  The result of that Merge Patch is then
-      |  used in place of the value of the original JSON map.
 
 A.1.  Constructing a Link from an Organization's Ecosystem
 
@@ -389,9 +385,13 @@ A.1.  Constructing a Link from an Organization's Ecosystem
 
 
 
-Bormann & Keränen         Expires 22 June 2026                  [Page 7]
+
+
+
+
+Bormann & Keränen       Expires 25 December 2026                [Page 7]
 
-Internet-Draft              sdfType for Links              December 2025
+Internet-Draft              sdfType for Links                  June 2026
 
 
    {
@@ -445,9 +445,9 @@ A.2.  Using with OMA test object
 
 
 
-Bormann & Keränen         Expires 22 June 2026                  [Page 8]
+Bormann & Keränen       Expires 25 December 2026                [Page 8]
 
-Internet-Draft              sdfType for Links              December 2025
+Internet-Draft              sdfType for Links                  June 2026
 
 
    =============== NOTE: '\' line wrapping per RFC 8792 ================
@@ -501,9 +501,9 @@ Internet-Draft              sdfType for Links              December 2025
 
 
 
-Bormann & Keränen         Expires 22 June 2026                  [Page 9]
+Bormann & Keränen       Expires 25 December 2026                [Page 9]
 
-Internet-Draft              sdfType for Links              December 2025
+Internet-Draft              sdfType for Links                  June 2026
 
 
    =============== NOTE: '\' line wrapping per RFC 8792 ================
@@ -557,9 +557,9 @@ Internet-Draft              sdfType for Links              December 2025
 
 
 
-Bormann & Keränen         Expires 22 June 2026                 [Page 10]
+Bormann & Keränen       Expires 25 December 2026               [Page 10]
 
-Internet-Draft              sdfType for Links              December 2025
+Internet-Draft              sdfType for Links                  June 2026
 
 
              "type": "integer"
@@ -613,9 +613,9 @@ Internet-Draft              sdfType for Links              December 2025
 
 
 
-Bormann & Keränen         Expires 22 June 2026                 [Page 11]
+Bormann & Keränen       Expires 25 December 2026               [Page 11]
 
-Internet-Draft              sdfType for Links              December 2025
+Internet-Draft              sdfType for Links                  June 2026
 
 
            "object-id": {
@@ -669,4 +669,4 @@ Authors' Addresses
 
 
 
-Bormann & Keränen         Expires 22 June 2026                 [Page 12]
+Bormann & Keränen       Expires 25 December 2026               [Page 12]
